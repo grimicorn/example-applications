@@ -1,0 +1,54 @@
+{
+    "key": "group_5cd9950b94066",
+    "title": "Social Media Menu Icons",
+    "fields": [
+        {
+            "key": "field_5cd995131aea3",
+            "label": "Social Media Icon",
+            "name": "social_media_icon",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "Choose Icon",
+                "fa-facebook": "Facebook",
+                "fa-instagram": "Instagram",
+                "fa-twitter": "Twitter",
+                "fa-youtube": "YouTube"
+            },
+            "default_value": [
+                "none"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "nav_menu_item",
+                "operator": "==",
+                "value": "location\/social_media_menu"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1557763490
+}

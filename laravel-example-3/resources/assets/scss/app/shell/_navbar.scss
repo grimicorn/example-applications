@@ -1,0 +1,103 @@
+// ==================================
+// Application Navbar
+// ==================================
+.app-navbar {
+	margin-top: 25px;
+	margin-bottom: 20px;
+	background-color: $color2;
+	padding: 10px 25px 15px;
+	display: flex;
+	align-items: center;
+} // .app-navbar
+
+.app-navbar-left {
+	flex: 1;
+	display: flex;
+	align-items: center;
+} // .app-navbar-left
+
+.app-navbar-right {
+	display: flex;
+	align-items: center;
+}
+
+// ==================================
+// Application Navbar - Logo
+// ==================================
+.app-navbar-logo-link {
+	display: block;
+} // .app-navbar-logo-link
+
+// ==================================
+// Application Navbar - Icons
+// ==================================
+.app-navbar-icons {
+	margin-right: 20px;
+} // .app-navbar-icons
+
+.app-navbar-icon {
+	font-size: 22px;
+	color: $color4;
+	margin-right: 5px;
+
+	@include link-interact {
+		color: $color4;
+		text-decoration: none;
+	} // @include link-interact
+
+	&:last-child {
+		margin-right: 0;
+	}
+} // .app-navbar-icon
+
+// ==================================
+// Application Navbar - Dropdown
+// ==================================
+.navbar-dropdown {
+	position: relative;
+} // .navbar-dropdown
+
+.navbar-dropdown-activator {
+	font-size: 22px;
+	color: $color4;
+	margin-right: 10px;
+	cursor: pointer;
+} // .navbar-dropdown-activator
+
+.navbar-dropdown-list {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	margin-top: 23px;
+	background-color: $color2;
+	padding: 10px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	min-width: 160px;
+	box-shadow: 0 6px 12px rgba($color9, 0.5);
+	z-index: 9999;
+
+	a {
+		color: $color5;
+	}
+} // .navbar-dropdown-list
+
+// ==================================
+// Application Navbar - Avatar
+// ==================================
+.app-navbar-avatar-link {
+	color: $color2;
+
+	@include link-interact {
+		color: $color2;
+		text-decoration: none;
+	} // @include link-interact
+} // .app-navbar-avatar-link
+
+.app-navbar-avatar-wrap {
+	display: inline-block;
+} // .app-navbar-avatar-wrap
+
+.app-navbar-avatar {
+	border-radius: 50%;
+} // .app-navbar-avatar

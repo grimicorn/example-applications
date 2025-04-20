@@ -1,0 +1,136 @@
+// ============================
+// Header
+// ============================
+.site-header {
+	padding-top: 10px;
+	padding-bottom: 15px;
+	position: relative;
+
+	@include bp-min($header-bp-min) {
+		display: flex;
+		align-items: center;
+	} // @include bp-min($header-bp-min)
+
+	.auth-page-wrap & {
+		margin-bottom: 25px;
+
+		@include bp-screen-sm {
+			margin-bottom: 25px; // will be 85px once registration is live
+		} // @include bp-screen-sm
+
+
+	} // .auth-page-wrap &
+
+	.page-no-header-space & {
+		margin-bottom: 0!important;
+	} // &.page-no-header-space &
+} // .site-header
+
+// ============================
+// Header - Navbar Header
+// ============================
+.container > .navbar-header {
+	display: flex;
+	align-items: center;
+	margin-right: 0;
+	margin-left: 0;
+	width: 100%;
+
+	@include bp-min($header-bp-min) {
+		width: auto;
+	} // @include bp-min($header-bp-min)
+} // .navbar-header
+
+// ============================
+// Header - Logo
+// ============================
+.site-logo-link-wrap {
+	flex: 1;
+
+	img {
+		@include bp-max($header-bp-min) {
+			width: 80px;
+			height: auto;
+		}
+	}
+} // .site-logo-link-wrap
+
+// ========================================
+// Header - Mobile Nav Toggle
+// ========================================
+.navbar-toggle {
+	border-color: $color4;
+	background-color: $color4;
+	margin-right: 0;
+
+	.icon-bar {
+		background-color: $color2;
+	} // .icon-bar
+
+	&.collapsed {
+		border-color: $color6;
+		background-color: transparent;
+
+		.icon-bar {
+			background-color: $color6;
+		} // .icon-bar
+	} // &.collapsed
+
+	&:hover,
+	&:active,
+	&:focus {
+		border-color: $color4;
+		background-color: $color4;
+
+		.icon-bar {
+			background-color: $color2;
+		} // .icon-bar
+	}
+} // .navbar-toggle
+
+.user-toggle {
+	padding: 4px 14px 5px;
+	color: $color2;
+	font-size: 22px;
+	margin-right: 10px;
+
+	&.collapsed {
+		color: $color6;
+	}
+}
+// ============================
+// Header - Login & Register
+// ============================
+.header-login-register {
+	display: none;
+
+	@include bp-screen-md() {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	@include bp-max($header-bp-min) {
+		position: absolute;
+		right: 75px;
+		top: 30px;
+		justify-content: flex-start;
+	} // @include bp-min($header-bp-min)
+
+	@include bp-max(300px) {
+		flex-direction: column;
+	} // @include bp-max(300px)
+
+	.btn {
+		margin-right: 10px;
+
+		@include bp-max(300px) {
+			margin-right: 0;
+			margin-bottom: 15px;
+		} // @include bp-max(300px)
+
+		&:last-child {
+			margin-right: 0;
+			margin-bottom: 0;
+		} // &:last-child
+	} // .btn
+} // .header-login-register

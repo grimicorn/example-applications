@@ -1,0 +1,74 @@
+.avatar-wrap {
+	max-width: 100%;
+	float: left;
+}
+
+// ====================================
+// Avatar Photo
+// ====================================
+.avatar-photo {
+  max-width: 100%;
+  height: auto;
+  float: left;
+} // .avatar-photo
+
+.app-navbar-avatar-link {
+  span {
+    font-size: 16px;
+  }
+}
+
+// ====================================
+// Avatar Initials
+// ====================================
+.avatar-initials {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	font-size: 0.4em;
+} // .avatar-initials
+
+// ====================================
+// Avatar Button
+// ====================================
+.fe-input-type-file-single-image-wrap {
+  .btn {
+    display: inline-block;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    min-width: 120px;
+  }
+} //.fe-input-type-file-single-image-wrap
+
+// ====================================
+// Avatar 2FA Icon
+// ====================================
+.icon-2fa {
+  color: $color2;
+  background-color: $color5;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: $xsmall;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: percentage(15/44) * -1;
+  margin-left: percentage(5/44) * -1;
+  text-align: center;
+  line-height: 20px;
+}
+
+// ====================================
+// Profile page overrides
+// ====================================
+.avatar-upload {
+  .avatar-photo {
+    font-size: $xlarge;
+  }
+}

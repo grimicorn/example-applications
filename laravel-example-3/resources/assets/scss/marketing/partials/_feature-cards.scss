@@ -1,0 +1,192 @@
+// =================================
+// Feature Cards
+// =================================
+.featured-cards-bg {
+	padding: 80px 0;
+	background-image: url('../img/feature-cards-bg.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	margin-bottom: 30px;
+
+	@include bp-screen-sm {
+		margin-bottom: 0;
+	} // @include bp-screen-sm
+
+	.featured-cards-title {
+		color: $color2;
+	}
+} // .featured-cards-bg
+
+// =================================
+// Feature Cards
+// =================================
+.featured-cards {
+	@include bp-screen-sm {
+		margin-bottom: 50px;
+	} // @include bp-screen-sm
+
+	.featured-cards-bg & {
+		margin-bottom: 0;
+	} // .featured-cards-bg &
+
+	> .inner {
+		display: flex;
+		flex-wrap: wrap;
+	} // > .inner
+} // .featured-cards
+
+// =================================
+// Feature Cards - Title
+// =================================
+.featured-cards-title {
+	margin-bottom: 40px;
+} // .featured-cards-title
+
+// =================================
+// Feature Cards - Content
+// =================================
+.featured-cards-content {
+	color: $color2;
+	font-size: 20px;
+	line-height: 1.25em;
+
+	@include bp-screen-xs {
+		font-size: 18px;
+	}
+} // .featured-cards-content
+
+// =================================
+// Feature Card
+// =================================
+.featured-card {
+	display: flex;
+	margin-top: 67.5px;
+
+	&:last-child {
+		margin-bottom: 0;
+	} // &:last-child
+
+	@include bp-screen-sm {
+		margin-top: 105px;
+	} // @include bp-screen-sm
+
+	> .inner {
+		padding: 0 30px 10px;
+		width: 100%;
+		border: 1px solid #ccc;
+		background-color: $color3;
+		margin: 0 15px;
+
+		@include bp-screen-sm {
+			min-height: 320px;
+		} // @include bp-screen-sm
+	} // > .inner
+
+	.featured-cards-bg & {
+		> .inner {
+			border: 0;
+			background-color: $color2;
+		} // > .inner
+	} // .featured-cards-bg &
+
+	&.has-button {
+		> .inner {
+			padding-bottom: 80px;
+		} // > .inner
+	} // &.has-button
+} // .featured-card
+
+// =================================
+// Feature Card - Icon
+// =================================
+.featured-card-icon-wrap {
+	margin-top: -37.5px;
+	margin-bottom: 25px;
+
+	@include bp-screen-sm {
+		margin-top: -75px;
+	} // @include bp-screen-sm
+} // .featured-card-icon-wrap
+
+// =================================
+// Feature Card - Title
+// =================================
+.featured-card-title {
+	color: $color7;
+	font-size: 26px;
+	font-weight: 700;
+	line-height: 1.4230769231em;
+	margin-bottom: 20px;
+} // .featured-card-title
+
+// =================================
+// Feature Card - Content
+// =================================
+.featured-card-content {
+	margin-bottom: 30px;
+} // .featured-card-content
+
+// =================================
+// Feature Card - List
+// =================================
+ul.featured-card-list {
+	margin-bottom: 30px;
+} // ul.featured-card-list
+
+// =================================
+// Feature Card - Button
+// =================================
+.featured-card-button-wrap {
+	position: absolute;
+	text-align: center;
+	left: 15px;
+	right: 15px;
+	bottom: 10px;
+	margin-bottom: 30px;
+
+	.btn {
+		display: inline-block;
+	} // .btn
+} // .featured-card-button-wrap
+
+
+// =================================
+// Overrides
+// =================================
+.buy-a-business,
+.sell-my-business {
+	.featured-card {
+		@include bp-screen-sm {
+			min-height: 380px;
+		} // @include bp-screen-sm
+
+		@include bp-screen-md {
+			min-height: 315px;
+		} // @include bp-screen-md
+	}
+}
+
+.business-brokers {
+	.featured-card {
+		@include bp-screen-sm {
+			min-height: 475px;
+		} // @include bp-screen-sm
+
+		@include bp-screen-md {
+			min-height: 345px;
+		} // @include bp-screen-md
+	}
+}
+
+.tools-resources {
+	.featured-card {
+		@include bp-screen-sm {
+			min-height: 440px;
+		} // @include bp-screen-sm
+
+		@include bp-screen-md {
+			min-height: 345px;
+		} // @include bp-screen-md
+	}
+}

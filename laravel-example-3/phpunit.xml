@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         bootstrap="bootstrap/autoload.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+         timeoutForSmallTests="15"
+         timeoutForMediumTests="30"
+         timeoutForLargeTests="60"
+         printerClass="Codedungeon\PHPUnitPrettyResultPrinter\Printer">
+    <testsuites>
+        <testsuite name="Feature">
+            <directory suffix="Test.php">./tests/Feature</directory>
+        </testsuite>
+
+        <testsuite name="Unit">
+            <directory suffix="Test.php">./tests/Unit</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./app</directory>
+        </whitelist>
+    </filter>
+    <php>
+        <env name="MAIL_DRIVER" value="log"/>
+        <env name="APP_ENV" value="testing"/>
+        <env name="CACHE_DRIVER" value="array"/>
+        <env name="SESSION_DRIVER" value="array"/>
+        <env name="QUEUE_DRIVER" value="sync"/>
+        <env name="DB_CONNECTION" value="phpunit"/>
+        <env name="ENABLE_SINGLE_SIGN_ON" value="true" />
+        <env name="DISABLE_LISTING_SEARCH_PUBLISH_RESTRICTION" value="true" />
+        <env name="MODEL_CACHE_DISABLED" value="true" />
+        <env name="FILESYSTEM_DRIVER" value="public" />
+        <env name="MEDIA_DEFAULT_FILESYSTEM" value="public" />
+    </php>
+</phpunit>

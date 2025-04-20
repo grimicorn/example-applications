@@ -1,0 +1,158 @@
+.tooltip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1060;
+  min-width: 150px;
+  max-width: 320px;
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  top: 50%;
+
+  p:last-child {
+	  margin-bottom: 0;
+  }
+}
+.tooltip.top {
+  top: -100%;
+  left: 50%;
+  margin-top: -30px;
+}
+
+.tooltip.right {
+  margin-left: 30px;
+}
+
+.tooltip.bottom {
+  top: 35px;
+  left: 50%;
+}
+
+.tooltip.left {
+  margin-left: -30px;
+}
+
+.tooltip > .arrow,
+.tooltip > .arrow:after {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.tooltip > .arrow {
+  border-width: 11px;
+}
+.tooltip > .arrow:after {
+  border-width: 10px;
+  content: '';
+}
+.tooltip.top > .arrow {
+  left: 50%;
+  margin-left: -11px;
+  border-bottom-width: 0;
+  border-top-color: #999999;
+  border-top-color: rgba(0, 0, 0, 0.25);
+  bottom: -11px;
+}
+.tooltip.top > .arrow:after {
+  content: ' ';
+  bottom: 1px;
+  margin-left: -10px;
+  border-bottom-width: 0;
+  border-top-color: #fff;
+}
+.tooltip.right > .arrow {
+  top: 50%;
+  left: -11px;
+  margin-top: -11px;
+  border-left-width: 0;
+  border-right-color: #999999;
+  border-right-color: rgba(0, 0, 0, 0.25);
+}
+.tooltip.right > .arrow:after {
+  content: ' ';
+  left: 1px;
+  bottom: -10px;
+  border-left-width: 0;
+  border-right-color: #fff;
+}
+.tooltip.bottom > .arrow {
+  left: 50%;
+  margin-left: -11px;
+  border-top-width: 0;
+  border-bottom-color: #999999;
+  border-bottom-color: rgba(0, 0, 0, 0.25);
+  top: -11px;
+}
+.tooltip.bottom > .arrow:after {
+  content: ' ';
+  top: 1px;
+  margin-left: -10px;
+  border-top-width: 0;
+  border-bottom-color: #fff;
+}
+.tooltip.left > .arrow {
+  top: 50%;
+  right: -11px;
+  margin-top: -11px;
+  border-right-width: 0;
+  border-left-color: #999999;
+  border-left-color: rgba(0, 0, 0, 0.25);
+}
+.tooltip.left > .arrow:after {
+  content: ' ';
+  right: 1px;
+  border-right-width: 0;
+  border-left-color: #fff;
+  bottom: -10px;
+}
+
+.tooltip-content {
+  text-transform: none;
+  white-space: normal;
+  width: 280px;
+  text-align: center;
+  color: $color6;
+}
+
+.tooltip-close {
+  line-height: 1em;
+  position: absolute;
+  padding: 0;
+  border: 0;
+  line-height: 1em;
+  background: none;
+  color: $color7;
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: none;
+    color: $color7;
+  }
+
+  .tooltip.top & {
+    top: 5px;
+    right: 5px;
+  }
+
+  .tooltip.right & {
+    right: 5px;
+    top: 5px;
+  }
+
+  .tooltip.bottom & {
+    right: 5px;
+    bottom: 5px;
+  }
+
+  .tooltip.left & {
+    left: 5px;
+    top: 5px;
+  }
+}

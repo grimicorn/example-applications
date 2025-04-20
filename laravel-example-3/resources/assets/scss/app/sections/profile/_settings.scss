@@ -1,0 +1,32 @@
+.profile-settings-wrap {
+
+	.profile-settings-username-wrap {
+		display: inline-block;
+	}
+
+	.profile-settings-update-password {
+		margin-bottom: 20px;
+	}
+
+	.profile-settings-username {
+		color: #747474;
+		font-size: 18px;
+		font-weight: 400;
+	}
+
+	.profile-settings-change-pasword-btn {
+		float: right;
+	}
+
+	h3 {
+		margin-bottom: 10px;
+	}
+
+	.fe-form-submit {
+		float: right;
+	}
+
+	.modal-content .fe-form-submit {
+		float: none;
+	}
+}

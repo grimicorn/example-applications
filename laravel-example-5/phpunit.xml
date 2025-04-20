@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false" backupStaticAttributes="false" bootstrap="vendor/autoload.php" colors="true" convertErrorsToExceptions="true" convertNoticesToExceptions="true" convertWarningsToExceptions="true" processIsolation="false" stopOnFailure="false" printerClass="Codedungeon\PHPUnitPrettyResultPrinter\Printer">
+    <testsuites>
+        <testsuite name="Unit">
+            <directory suffix="Test.php">./tests/Unit</directory>
+        </testsuite>
+
+        <testsuite name="Feature">
+            <directory suffix="Test.php">./tests/Feature</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./app</directory>
+        </whitelist>
+    </filter>
+    <listeners>
+        <listener class="NunoMaduro\Collision\Adapters\Phpunit\Listener" />
+    </listeners>
+    <php>
+        <env name="APP_ENV" value="testing"/>
+        <env name="BCRYPT_ROUNDS" value="4"/>
+        <env name="CACHE_DRIVER" value="array"/>
+        <env name="SESSION_DRIVER" value="array"/>
+        <env name="QUEUE_CONNECTION" value="sync"/>
+        <env name="MAIL_DRIVER" value="array"/>
+        <env name="DB_CONNECTION" value="phpunit"/>
+        <env name="FILESYSTEM_DRIVER" value="test"/>
+        <env name="MEDIALIBRARY_DISK_NAME" value="test"/>
+        <env name="MODEL_CACHE_DISABLED" value="true"/>
+        <env name="BROADCAST_DRIVER" value="log"/>
+        <env name="ACTIVITY_LOGGER_ENABLED" value="false"/>
+        <env name="SRCWATCH_REGISTRATION_ENABLED" value="true" />
+        <env name="APP_DEBUG" value="true" />
+        <env name="TELESCOPE_ENABLED" value="false" />
+        <env name="QUERY_DETECTOR_ENABLED" value="false" />
+        <env name="DEBUGBAR_ENABLED" value="false" />
+    </php>
+</phpunit>

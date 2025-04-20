@@ -1,0 +1,62 @@
+// Handles setting a consistent hover.
+//
+// @param  {color}  $color     Color to use as base for hover.
+// @param  {boolean}  $darken  Optional. If `darken()`(TRUE) or `lighten()`(FALSE) should be used. Default TRUE.
+@function hover($color, $darken:true) {
+  @if $darken {
+    @return darken($color, 5%);
+  } @else {
+    @return lighten($color, 5%);
+  } // @if/@else
+} // @function hover
+
+// Calculates ems from pixels.
+//
+// @param {string} The size in pixels
+// @param {string} Optional, the browser context size. Defaults to $base-font-size;
+@function em($pixels, $context: $base-font-size) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1em;
+}
+
+// Calculates rems from pixels.
+//
+// @param {string} The size in pixels
+// @param {string} Optional, the browser context size. Defaults to $base-font-size;
+@function rem($pixels, $context: $base-font-size) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}
+
+/// Remove the unit of a length
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@function container-percentage($number, $container: $container-lg) {
+	@return percentage(strip-unit($number) / strip-unit($container));
+}
+
+@function tight-container-percentage($number, $container: $tight-container) {
+	@return percentage(strip-unit($number) / strip-unit($container));
+}

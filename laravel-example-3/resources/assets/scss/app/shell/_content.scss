@@ -1,0 +1,18 @@
+// =================================
+// Application - Content
+// =================================
+.app-container {
+	min-width: 1170px;
+}
+
+.app-content-wrap {
+	float: left;
+	width: 945px;
+	min-width: 945px;
+	// width: percentage((1326 - (240 + 80)) / 1326);
+} // .app-content-wrap
+
+.app-content {
+	background-color: $color2;
+	padding: $app-content-gutter $app-content-gutter - 5;
+} // .app-content

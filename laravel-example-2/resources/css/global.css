@@ -1,0 +1,111 @@
+/*
+Fonts
+*/
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
+
+/*
+Global
+*/
+*,
+body {
+  @apply font-sans;
+}
+
+/*
+Link Styles
+*/
+
+a {
+  @apply text-red underline;
+}
+
+a:hover {
+  @apply text-orange;
+  transition: color 0.2s;
+}
+
+/*
+Navigation
+*/
+
+.main-navigation {
+  ul {
+    @apply flex;
+  }
+
+  a {
+    @apply text-black uppercase font-bold no-underline text-sm;
+  }
+
+  ul li {
+    @apply px-4;
+  }
+
+  .active a {
+    @apply text-red-dark;
+  }
+}
+
+.navigation-logo .login-logo {
+  @apply text-red;
+  margin-top: -8px;
+  width: 100px;
+
+  .st1 {
+    fill: #e53d2e;
+  }
+}
+
+/*
+Button Styles
+*/
+
+.button {
+  @apply bg-red text-white font-bold uppercase px-16 py-3 rounded;
+  transition: all 0.2s;
+
+  &:hover,
+  &:active,
+  &:focus {
+    @apply bg-orange shadow-md;
+    transition: all 0.2s;
+  }
+
+  &:disabled {
+    @apply opacity-75;
+  }
+}
+
+.ghost {
+  @apply bg-transparent border-red border text-red;
+}
+
+.ghost:hover {
+  @apply bg-gray-100;
+}
+
+/*
+Inputs
+*/
+
+label {
+  @apply uppercase font-bold;
+}
+
+/*
+Footer
+*/
+.footer {
+  .logo {
+    @apply mt-0;
+    max-width: 100px;
+  }
+
+  .footer-column {
+    @apply px-12 flex items-center;
+  }
+}
+
+.input-file .drop-file {
+  @apply inline-block mr-2;
+}

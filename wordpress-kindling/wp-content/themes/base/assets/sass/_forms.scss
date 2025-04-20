@@ -1,0 +1,223 @@
+.gform_wrapper{
+  .gform_fields{
+    @apply flex flex-wrap -mx-2;
+    width:calc(100% + 1rem);
+  }
+  .gfield{
+    @apply pb-4;
+		&.half{
+			@screen sm{
+			@apply w-1/2;
+			}
+		}
+		&.third{
+			@screen sm{
+			@apply w-1/3;
+			}
+		}
+		&.fourth{
+			@screen sm{
+			@apply w-1/2;
+			}
+			@screen md{
+			@apply w-1/4;
+			}
+		}
+  }
+  ul,li{
+    @apply list-reset;
+  }
+  input[type="text"],
+  select,
+  textarea{
+    @apply border-1 bg-white border-black rounded-none resize-none appearance-none w-full p-2;
+  }
+  .gfield_error{
+    input[type="text"],
+    select,
+    textarea{
+      @apply border-error;
+    }
+  }
+  .gfield_radio,.gfield_checkbox{
+    @apply relative;
+    input{
+      @apply absolute invisible;
+    }
+    label{
+      @apply relative cursor-pointer pl-5;
+      &:before{
+        content:"";
+        @apply block absolute mr-1 bg-white border-1 border-black;
+        width:16px;
+        height:16px;
+        z-index:8;
+        left:0;
+        top:1px;
+      }
+    }
+    input:checked + label{
+      &:after{
+        @apply block;
+        z-index:9;
+      }
+    }
+  }
+  .gfield_radio{
+    label{
+      &:after{
+        content:"";
+        @apply absolute bg-theme-1 hidden;
+        width:10px;
+        height:10px;
+        top:4px;
+        left:3px;
+        border-radius:50%;
+      }
+    }
+  }
+  .gfield_checkbox{
+    label{
+      &:after{
+        content:"";
+        @apply absolute border-theme-1 border-b-4 border-r-4 hidden;
+        width: 9px;
+        height: 16px;
+        top: -2px;
+        left: 5px;
+        transform:rotate(45deg);
+      }
+    }
+  }
+
+  .gfield_radio{
+    label{
+      &:before{
+        border-radius:50%;
+      }
+    }
+  }
+  .ginput_container_select,
+  .ginput_container_date{
+    @apply relative mb-1;
+    input,select{
+      @apply cursor-pointer;
+    }
+    &:after{
+      content:"";
+      @apply block absolute;
+      width:10px;
+      height:10px;
+      border-bottom:1px solid;
+      border-right:1px solid;
+      border-color:black;
+      transform:rotate(45deg);
+      right:15px;
+      top:calc(50% - 7px);
+      pointer-events:none;
+    }
+  }// Adds arrow to dropdowns
+  .ginput_container_date{
+    &:after{
+      top:calc(50% - 9px);
+    }
+  }
+  .gfield_description,
+  .gform_description,
+  .validation_error{
+    @apply block w-full mb-2;
+  }
+  .gfield_description{
+    padding: 0 5px;
+  }
+  .gfield{
+    @apply block w-full mb-2 px-2;
+  }
+  .gfield_label{
+    @apply block w-full font-bold;
+  }
+  .ginput_complex label{
+    @apply block w-full mb-1 text-sm;
+  }
+  .ginput_container{
+    @apply block w-full;
+    input{
+      @apply block w-full mb-1;
+    }
+  }
+  .validation_message{
+    @apply text-xs text-error;
+  }
+  .validation_error{
+    @apply text-error;
+  }
+  .ginput_container_address{
+    @apply flex flex-wrap;
+      span{
+        @apply p-1;
+    }
+    .address_city,
+    .address_line_1,
+    .address_line_2{
+      @apply block w-full;
+      @screen sm{
+        @apply w-1/2;
+      }
+    }
+    .address_state,
+    .address_zip{
+      @apply block w-1/2;
+      @screen sm{
+        @apply w-1/4;
+      }
+    }
+  }
+  .ginput_container_name{
+    @apply flex flex-wrap;
+    .name_first,
+    .name_last{
+      @apply block w-full;
+    }
+    @screen md{
+      .name_first{
+        @apply w-1/2 pr-2;
+      }
+      .name_last{
+        @apply w-1/2 pl-2;
+      }
+    }
+  }
+  form.hide-labels{
+    .gfield_label{
+      @apply sr-only;
+    }
+    .ginput_complex{
+      label{
+        @apply sr-only;
+      }
+    }
+    .gfield{
+      @apply m-0;
+    }
+  }
+  form.hide-sub-labels{
+    .ginput_complex{
+      label{
+        @apply sr-only;
+      }
+    }
+  }
+}// Gravity forms
+
+.search-form{
+  @apply w-full flex flex-col justify-start items-start;
+  .search-field-wrap{
+    @apply flex w-full justify-start items-stretch;
+  }
+  .search-field{
+    @apply flex-1 border-1 border-grey pl-4;
+  }
+  .search-label-wrap{
+    @apply sr-only;
+  }
+}

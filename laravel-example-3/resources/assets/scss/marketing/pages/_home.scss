@@ -1,0 +1,93 @@
+// =====================================
+// Home - Featured Image
+// =====================================
+.home-featured-image {
+	background: url('../img/fe-home.png') center center no-repeat;
+	background-size: cover;
+	min-height: 250px;
+	padding: 15px;
+	display: block;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 15px;
+	background-position: top;
+
+	@include bp-screen-xs {
+
+	}
+
+	@include bp-min-max($screen-xs, $screen-sm) {
+		min-height: 300px;
+	} // @include bp-min-max($screen-xs, $screen-sm)
+
+	@include bp-screen-sm {
+		min-height: 600px;
+		margin-bottom: 60px;
+		padding-top: 140px;
+	} // @include bp-screen-sm
+
+	> .inner {
+		text-align: center;
+		margin: 0 10%;
+		padding: 15px;
+		background-color:rgba(0, 0, 0, 0.5);
+
+	} // > .inner
+
+	.line-1,
+	.line-2 {
+		color: $color2;
+	} // .line-1,.line-2
+
+	.line-1 {
+		font-size: 32px;
+		font-weight: 300;
+		line-height: 1.24em;
+		margin-bottom: 15px;
+
+		@include bp-screen-xs {
+			font-size: 26px;
+		}
+
+		@include bp-screen-sm {
+			margin-bottom: 30px;
+		} // @include bp-screen-sm
+	} // .line-1
+
+	.line-2 {
+		font-size: 18px;
+		line-height: 1.72em;
+		margin-bottom: 15px;
+
+		@include bp-screen-sm {
+			margin-bottom: 35px;
+		} // @include bp-screen-sm
+	} // .line-1
+} // .home-featured-image
+
+.home-featured-image-logo {
+	margin-bottom: 40px;
+	display: inline;
+
+	@include bp-max(600px) {
+		display: none;
+	}
+} // .home-featured-image-logo
+
+// =====================================
+// Home - Content Area
+// =====================================
+.home-content-area {
+	p {
+		margin-bottom: 25px;
+	} // p
+
+	h1 {
+		text-transform: none;
+		margin-bottom: 30px;
+
+		@include bp-screen-xs {
+			margin-top: 20px;
+		}
+	}
+} // .home-content-area

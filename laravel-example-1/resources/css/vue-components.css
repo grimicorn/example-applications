@@ -1,0 +1,86 @@
+/* ============================================================== */
+/* Vue Components (Add back to SFC once @apply is working again.) */
+/* ============================================================== */
+
+/* input-boolean.vue */
+.input-boolean {
+    label {
+        @apply cursor-pointer;
+    }
+
+    input[type="radio"] {
+        @apply w-0 h-0 p-0 m-0 border-none shadow-none opacity-0;
+
+        &:checked+label {
+            @apply font-bold text-primary-800;
+        }
+    }
+}
+
+/* location-inline-edit-wrapper.vue */
+.location-inline-edit-wrapper {
+
+    input,
+    select {
+        @apply inline w-auto px-2 py-1 mr-1 bg-transparent border-0 border-b-2 border-gray-500;
+    }
+
+    .has-error input,
+    .has-error select,
+    .has-error textarea {
+        @apply border-danger;
+    }
+
+    select {
+        @apply pr-8;
+    }
+}
+
+/* tags.vue and input-fancy-select.vue */
+.v-select-wrap {
+    .vs__dropdown-toggle {
+        @apply px-2 py-1 bg-white rounded-none border-primary-900;
+        min-height: 38px;
+    }
+
+    .vs__actions {
+        @apply text-primary-900;
+
+        svg {
+            @apply fill-current;
+        }
+    }
+
+    .vs__selected {
+        @apply text-black;
+
+        svg {
+            @apply fill-current;
+        }
+    }
+
+    &.tags {
+        .vs__selected {
+            @apply px-2 m-0 mr-1 border-transparent border-none text-primary-100 bg-primary-900;
+
+            svg {
+                @apply fill-current;
+            }
+        }
+    }
+
+    .vs__selected-options {
+        @apply p-0;
+    }
+
+    input[type="search"] {
+        @apply z-10 w-0 max-w-full py-1 m-0 text-base leading-none bg-transparent border-none appearance-none;
+        flex-grow: 1;
+        box-shadow: none !important;
+        outline: none !important;
+
+        &::placeholder {
+            @apply text-gray-500;
+        }
+    }
+}

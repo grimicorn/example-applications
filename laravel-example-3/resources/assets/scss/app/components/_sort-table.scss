@@ -1,0 +1,131 @@
+// =====================================
+// Sort Table - Table Head
+// =====================================
+.sort-table-label,
+.sort-table-sort-icons {
+  display: inline-block;
+} // .sort-table-label,.sort-table-sort-icons
+
+.sort-table-sort-icons {
+  height: 13px;
+  width: 9px;
+  text-align: center;
+  position: relative;
+} // .sort-table-sort-icons
+
+.sort-table-sort-icon {
+  color: $color5;
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  line-height: 4px;
+  height: 5px;
+} // .sort-table-sort-icon
+
+.sort-table-sort-icon.is-asc {
+  top: 0;
+
+  .is-sorted-desc & {
+    opacity: 0;
+  } // .is-sorted-desc &
+} // .sort-table-sort-icon.is-asc
+
+.sort-table-sort-icon.is-desc {
+  bottom: 0;
+
+  .is-sorted-asc & {
+    opacity: 0;
+  } // .is-sorted-asc &
+} // .sort-table-sort-icon.is-desc
+
+// =====================================
+// User Table - Table Body
+// =====================================
+.sort-table {
+  border: 2px solid $color9;
+  width: 100%;
+
+  thead {
+    border-bottom: 2px solid $color9;
+
+    th {
+      text-align: left;
+      padding: 5px;
+
+      &:first-child {
+        padding-left: 15px;
+      }
+
+      &:last-child {
+        padding-right: 15px;
+      }
+
+      .sort-table-label {
+        color: $color5;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      transition: opacity $default-transition;
+      border-bottom: 2px solid $color9;
+
+      &:nth-child(odd) {
+        background-color: $color9;
+      }
+    } // tr
+
+    td {
+      padding: 15px 5px;
+
+      &:first-child {
+        padding-left: 15px;
+      }
+
+      &:last-child {
+        padding-right: 15px;
+      }
+    }
+  } // tbody
+
+  &.is-filtering {
+    tbody {
+      tr {
+        opacity: 0;
+        border: 0;
+
+        &.sort-table-body-filtering-icon {
+          opacity: 1;
+        } // .sort-table-body-filtering-icon
+      }
+    }
+  } // .is-filtering
+
+  &.remove-borders-and-striping {
+    border: 0;
+
+    thead {
+      border-bottom: 0;
+    }
+
+    tbody {
+      tr {
+        background-color: transparent;
+        border-bottom: 0;
+      } // tr
+    } // tbody
+  } // .remove-borders-and-striping
+}
+
+// =====================================
+// Exchange Space - Table Body
+// =====================================
+
+.sort-table thead {
+  th.es-last-activity {
+    text-align: center;
+  }
+}

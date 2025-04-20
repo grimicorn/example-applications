@@ -1,0 +1,31 @@
+// =======================================
+// Marketing Specific Variables
+// =======================================
+@import 'marketing/variables';
+
+// =======================================
+// Shared Styles
+// =======================================
+@import 'shared/colors';
+@import 'shared/variables';
+@import 'shared/fonts';
+@import 'shared/functions';
+@import 'shared/mixins';
+@import 'shared/base';
+@import 'shared/buttons';
+
+.blog-wrap-section {
+	// =======================================
+	// Marketing Specific Styles
+	// =======================================
+	@import 'marketing/header/header';
+	@import 'marketing/header/navigation';
+	@import 'marketing/footer/footer';
+	@import 'marketing/footer/cta-bar';
+	@import 'marketing/partials/social-menu';
+
+	// =======================================
+	// Utilities and Overrides
+	// =======================================
+	@import 'shared/utilities';
+}

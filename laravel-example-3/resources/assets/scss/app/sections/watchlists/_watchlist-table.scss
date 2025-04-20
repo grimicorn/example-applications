@@ -1,0 +1,25 @@
+// =================================
+// Watchlist Table
+// =================================
+.sort-table {
+    .wl-name {
+        width: 50%;
+    }
+    
+    .wl-matches {
+        width: 10%;
+        text-align: center;
+    }
+    
+    .wl-actions {
+        width: 40%;
+    
+        .btn {
+            display: inline-block;
+        }
+    
+        .modal-component {
+            display: inline-block;
+        }
+    }
+}

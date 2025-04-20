@@ -1,0 +1,23 @@
+// =====================================
+// Feature Switcher - Small
+// =====================================
+.feature-switcher-small {
+	.feature-switcher-details-wrap {
+		flex-direction: column;
+		margin-bottom: 25px;
+	} // .feature-switcher-details-wrap
+
+	.feature-switcher-icon {
+		font-size: 33px;
+		line-height: 1em;
+		margin-bottom: 10px;
+		height: 33px;
+		width: 100%;
+		display: block;
+
+		&.img-icon {
+			background-position: center center;
+			background-repeat: no-repeat;
+		} // .img-icon
+	} // .feature-switcher-icon
+} // .feature-switcher-small

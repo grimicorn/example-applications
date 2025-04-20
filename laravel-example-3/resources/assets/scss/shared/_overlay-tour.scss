@@ -1,0 +1,26 @@
+.overlay-tour-final-step-wrap {
+	position: absolute;
+	text-align: center;
+	opacity: 0;
+	pointer-events: none;
+	right: 0;
+	bottom: 10px;
+	left: 0;
+
+	&.active {
+		opacity: 1;
+		pointer-events: initial;
+	} // &.active
+} // .overlay-tour-final-step-wrap
+
+.overlay-tour-final-step {
+	color: $color7;
+	border: 2px solid $color7;
+	line-height: 20px;
+	width: 24px;
+	padding: 0;
+} // .overlay-tour-final-step
+
+.introjs-tooltip {
+	width: 600px;
+} // .introjs-tooltip

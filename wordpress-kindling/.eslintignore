@@ -1,0 +1,4 @@
+**/node_modules/**
+wp-content/themes/**/assets/scripts/libs/**
+webpack.mix.js
+wp-content/mu-plugins/kindling-assets/dist/**

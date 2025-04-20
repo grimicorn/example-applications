@@ -1,0 +1,17 @@
+.vtable-filters {
+  label {
+    @apply text-sm whitespace-no-wrap;
+  }
+
+  input,
+  select {
+    height: 40px;
+  }
+
+  .input-wrap {
+    @apply mb-6;
+    @screen lg {
+      @apply mb-0;
+    }
+  }
+}

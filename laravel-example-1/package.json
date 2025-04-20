@@ -1,0 +1,53 @@
+{
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production",
+        "tailwind-config-viewer": "tailwind-config-viewer -o",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000"
+    },
+    "dependencies": {
+        "@heroicons/vue": "^1.0.1",
+        "autoprefixer": "^10.2.5",
+        "clipboard": "^2.0.8",
+        "collect.js": "^4.28.2",
+        "crypto-browserify": "^3.12.0",
+        "crypto-js": "^4.0.0",
+        "date-fns": "^2.21.3",
+        "eslint-plugin-vue": "^7.9.0",
+        "lodash.debounce": "^4.0.8",
+        "lodash.filter": "^4.6.0",
+        "lodash.set": "^4.3.2",
+        "marked": "^1.2.9",
+        "postcss": "^8.3.0",
+        "sass": "^1.33.0",
+        "sass-loader": "^11.1.1",
+        "simplemde": "^1.11.2",
+        "stream-browserify": "^3.0.0",
+        "tailwindcss": "^2.1.2",
+        "vue": "^3.0.0-beta.1",
+        "vue-loader": "^16.0.0-beta.8",
+        "vue-select": "github:wolfjagger/vue-select#tmp/vue-3-easy-install",
+        "vue-template-compiler": "^2.6.12",
+        "vuex": "^4.0.0-alpha.1"
+    },
+    "devDependencies": {
+        "@tailwindcss/forms": "^0.2.1",
+        "@tailwindcss/jit": "^0.1.18",
+        "@tailwindcss/typography": "^0.4.0",
+        "@vue/compiler-sfc": "^3.0.11",
+        "axios": "^0.21.0",
+        "browser-sync": "^2.26.12",
+        "browser-sync-webpack-plugin": "^2.0.1",
+        "cross-env": "^7.0",
+        "eslint": "^7.26.0",
+        "laravel-mix": "^6.0.19",
+        "postcss-import": "^14.0.2",
+        "postcss-nested": "^5.0.5",
+        "resolve-url-loader": "^3.1.3",
+        "tailwind-config-viewer": "^1.5.1"
+    }
+}

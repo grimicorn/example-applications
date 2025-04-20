@@ -1,0 +1,109 @@
+.percentage-row {
+  font-style: italic;
+
+  &:first-child {
+    padding-left: 35px !important;
+
+  }
+
+  &:nth-child(3) {
+    text-align: right;
+  }
+  &:nth-child(4) {
+    text-align: right;
+  }
+  &:nth-child(5) {
+    text-align: right;
+  }
+}
+
+.financial-table {
+  border: 2px solid $color9;
+  width: 100%;
+
+  thead {
+    border-bottom: 2px solid $color9;
+
+    tr {
+      text-align: left;
+      padding: 5px;
+
+      .historical-financial-table-label {
+        color: $color5;
+        text-decoration: underline;
+        padding: 10px 5px;
+
+        &:first-child {
+          padding-left: 20px;
+        }
+
+        &:last-child {
+          padding-right: 20px;
+        }
+
+        &.year {
+          text-align: right;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      transition: opacity $default-transition;
+
+      &.table-section-title {
+        font-weight: bold;
+        border: 1px solid $color9;
+      }
+      &:first-child {
+        border-right: 2px solid $color9;
+      }
+
+      &.text-italic td {
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+    } // tr
+
+    td {
+      padding: 15px 5px;
+      width: 15%;
+
+      &:first-child {
+        padding-left: 20px;
+        width: 40%;
+      }
+      &:nth-child(2) {
+        text-align: right;
+      }
+      &:nth-child(3) {
+        text-align: right;
+      }
+      &:nth-child(4) {
+        text-align: right;
+      }
+      &:nth-child(5) {
+        text-align: right;
+      }
+      &:last-child {
+        padding-right: 20px;
+      }
+
+      &.label-indent {
+        padding-left: 40px;
+        font-style: italic;
+      }
+    }
+  } // tbody
+}
+
+// =================================
+// Repeater override
+// =================================
+.repeater-input {
+  .total-labels {
+    width: 843px;
+  }
+}

@@ -1,0 +1,73 @@
+// ====================================
+// Application Alert
+// ====================================
+.alert {
+	width: 100%;
+	background-color: $color-info;
+	color: $color2;
+	padding: 15px;
+	position: relative;
+	margin-bottom: 15px;
+
+	button.close {
+		background-color: transparent;
+		padding: 0;
+		border: 0;
+		position: absolute;
+		right: 0;
+		font-size: 16px;
+		margin-top: -8px;
+		line-height: 1em;
+		top: 50%;
+		right: 20px;
+	} // button.close
+
+	&.alert-dismissible {
+		padding-right: 35px;
+	} // .&alert-dismissible
+} // .alert
+
+
+// ====================================
+// Application Alert - Variations
+// ====================================
+.alert-success {
+	background-color: $color-success
+} // .alert-success
+
+.alert-info {
+	background-color: $color-info
+} // .alert-info
+
+.alert-warning {
+	background-color: $color-warning
+} // .alert-warning
+
+.alert-danger {
+	background-color: $color-danger
+} // .alert-danger
+
+// ====================================
+// Flash Alert - Bottom Right Position
+// ====================================
+
+.flash-alerts {
+	position: fixed;
+    top: 25px;
+    left: 40%;
+    z-index: 9;
+}
+
+// ====================================
+// Status Indicator - Listing Edit
+// ====================================
+
+.alert-posted {
+    color: $color-success;
+    padding: 0 5px;
+}
+
+.alert-notposted {
+	color: $color-danger;
+    padding: 0 5px;
+}

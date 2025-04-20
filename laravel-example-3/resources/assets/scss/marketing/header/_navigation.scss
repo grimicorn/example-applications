@@ -1,0 +1,212 @@
+// ========================================
+// Site Navigation
+// ========================================
+.navbar-default.site-navigation {
+	background: none;
+	border: 0;
+	flex: 1;
+	margin: 0;
+	min-height: 1px;
+	border-radius: 0;
+	clear: both;
+
+	@include bp-min($header-bp-min) {
+		clear: none;
+	} // @include bp-min($header-bp-min)
+
+	.navbar-collapse {
+		background: none;
+		padding: 20px 0;
+		border: 0;
+
+		@include bp-min($header-bp-min) {
+			padding-left: 10px;
+			padding-right: 10px;
+		} // @include bp-min($header-bp-min)
+	} // .navbar-collapse
+
+	.nav {
+		margin: 0;
+		width: 100%;
+
+		@include bp-min($header-bp-min) {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			margin-right: 30px;
+		} // @include bp-min($header-bp-min)
+
+		li {
+			// scss-lint:disable NestingDepth,SelectorDepth
+			padding: 0;
+			width: 100%;
+
+			@include bp-min($header-bp-min) {
+				margin: 0;
+				width: auto;
+			} // @include bp-min($header-bp-min)
+
+			&:last-child {
+				margin-bottom: 0;
+			} // &:last-child
+
+			a {
+				font-size: 16px;
+				line-height: 1em;
+				font-weight: 700;
+				white-space: nowrap;
+				padding: 0;
+
+				@include bp-min($header-bp-min) {
+					padding: 0 10px;
+				} // @include bp-min($header-bp-min)
+			} // a
+
+			&.active > a,
+			&:hover > a,
+			&:focus > a,
+			a:hover,
+			a:focus,
+			a:active {
+				background: none;
+				color: $color5;
+			} // > a states
+		} // li
+
+		> li {
+			margin-bottom: 20px;
+
+			@include bp-min($header-bp-min) {
+				margin-bottom: 0;
+			} // @include bp-min($header-bp-min)
+
+			// scss-lint:disable NestingDepth,SelectorDepth
+			> a {
+				@include bp-min($header-bp-min) {
+					border-right: 2px solid $color4;
+				} // @include bp-min($header-bp-min)
+			}
+
+			&:last-child > a {
+				@include bp-min($header-bp-min) {
+					border-right: 0;
+				} // @include bp-min($header-bp-min)
+			} // &:last-child
+
+			& .dropdown-item {
+				padding: 10px 20px;
+				//color: $color7;
+
+				&:last-child {
+					padding-bottom: 0;
+				}
+
+			}
+		} // > li
+	} // .nav
+
+	.dropdown-item-toggle {
+		position: absolute;
+		line-height: 14px;
+		top: 0;
+		right: 0;
+		width: 40px;
+		text-align: center;
+		font-size: 18px;
+
+		@include bp-min($header-bp-min) {
+			display: none;
+		} // @include bp-min($header-bp-min)
+	} // .dropdown-item-toggle
+
+	li.open > .dropdown-item-toggle {
+		transform: rotate(-90deg);
+		transition: $default-transition;
+	} // .dropdown-item-toggle
+
+	.dropdown-menu {
+		@include bp-max($header-bp-min) {
+			position: static;
+			float: none;
+			width: auto;
+			margin-top: 0;
+			background-color: transparent;
+			border: 0;
+			box-shadow: none;
+		} // @include bp-max($header-bp-min)
+
+		@include bp-min($header-bp-min) {
+			margin-left: 50%;
+			transform: translateX(-50%);
+			text-align: center;
+			padding: 10px;
+			position: absolute;
+
+			&:after {
+				content: '';
+				display: inline-block;
+				width: 14px;
+				height: 14px;
+				background-color: #fff;
+				border-top: solid 1px #ccc;
+				border-left: solid 1px #ccc;
+				position: absolute;
+				top: 0;
+				left: 50%;
+				margin-left: -7px;
+				transform-origin: center;
+				transform: translateY(-8px) rotate(45deg);
+			}
+
+			li > a {
+				padding: 8px 15px!important;
+			}
+		}
+	}
+
+	li.dropdown {
+		@include bp-min($header-bp-min) {
+			margin-bottom: -20px;
+		} // @include bp-min($header-bp-min)
+
+		> a {
+			@include bp-max($header-bp-min) {
+				padding-right: 40px;
+			} // @include bp-max($header-bp-min)
+		}
+
+		&:hover > .dropdown-menu  {
+			@include bp-min($header-bp-min) {
+				display: block;
+			} // @include bp-min($header-bp-min)
+		} // &:hover > .dropdown-menu
+	} // &:hover > .dropdown-menu
+} // .navbar-default.site-navigation
+
+.login-register-nav {
+	@include bp-screen-md() {
+		display: none !important;
+
+		.collapse.in {
+			display: none !important;
+		}
+	}
+}
+
+
+@media (max-width: $header-bp-min) {
+    .navbar-toggle {
+      display: block;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+}

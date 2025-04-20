@@ -1,0 +1,59 @@
+// =============================
+// Listing Photos
+// =============================
+
+.listing-photo-header {
+  background-color: $color3;
+  color: #fff;
+  padding: 0 10px;
+  cursor: move;
+
+	.has-error & {
+		background-color: $color-danger;
+	}
+
+  .listing-photo-number {
+    padding-right: 10px;
+  }
+
+  .listing-photo-delete {
+    cursor: pointer;
+    color: $color2;
+    font-size: 18px;
+    padding-left: 10px;
+
+    &:hover {
+      color: $color7;
+    }
+  } // .listing-photo-delete
+} // .listing-photo-header
+
+.listing-photo-wrap {
+  border: 1px solid $color3;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  height: 188px;
+
+  img {
+    max-height: 158px;
+  }
+
+	.has-error & {
+		border-color: $color-danger;
+	}
+
+	.fe-input-error-message {
+		position: absolute;
+		background: rgba($color-danger, .9);
+		font-weight: bold;
+		color: $color2;
+		top: 0;
+		bottom: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	} // .fe-input-error-message
+} // .listing-photo-wrap

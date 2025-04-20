@@ -1,0 +1,27 @@
+.job-flag {
+  @apply absolute z-10 text-white;
+  height: 50px;
+  right: -25px;
+  top: -25px;
+  transform: rotate(45deg);
+  width: 50px;
+
+  &.bg-flag-sunday {
+    @apply border border-gray-400 text-gray-400;
+  }
+}
+
+.panel-header .job-flag {
+  height: 150px;
+  right: -75px;
+
+  top: -75px;
+  width: 150px;
+}
+
+.flag-date {
+  @apply absolute block font-bold;
+  bottom: 15%;
+  right: 37%;
+  transform: rotate(-45deg);
+}

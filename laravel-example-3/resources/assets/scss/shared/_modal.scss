@@ -1,0 +1,125 @@
+// ==============================
+// Modal - Background
+// ==============================
+.modal-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999999999999;
+  background-color: rgba($color1, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} // .modal-background
+
+// ==============================
+// Modal - Title
+// ==============================
+.modal-title {
+	margin-bottom: 25px;
+}
+
+// ==============================
+// Modal - Content
+// ==============================
+.modal-content {
+  background-color: $color2;
+  box-shadow: 2px 3px 7px rgba($color1, 0.35);
+  border: 1px solid $color9;
+  background-color: $color2;
+  padding: 40px 75px;
+  max-width: 100%;
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  width: 620px;
+
+  @include bp-max(620px) {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    padding: 40px 25px
+  }
+} // .modal-background
+
+.modal-width-small {
+  width: 620px;
+}
+
+.modal-content-medium {
+  width: 800px;
+}
+
+.modal-content-large {
+  width: 1120px;
+}
+
+// ==============================
+// Modal - Lightbox
+// ==============================
+.modal-lightbox {
+	.modal-close {
+		background-color: rgba(255,255,255,.25);
+		top: 5px;
+		right: 5px;
+		z-index: 3;
+		color: $color1;
+
+		&:hover {
+			background-color: rgba(255,255,255,.5);
+		} // &:hover
+	} // .modal-close
+
+	.modal-content {
+		padding: 5px;
+		max-width: 95%;
+		min-width: 70px;
+		width: auto;
+		min-height: 70px;
+		max-height: 95%;
+	} // .modal-content
+
+	.modal-lightbox-image {
+		max-width: 100%;
+		width: auto;
+		max-height: 100%;
+		height: auto;
+		z-index: 1;
+		position: relative;
+	} // .modal-lightbox-image
+
+	.fe-loader {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 0;
+	} // .fe-loader
+} // .modal-lightbox
+
+// ==============================
+// Modal - Lightbox Slider
+// ==============================
+.modal-lightbox-slider {
+	.modal-content {
+		width: auto;
+		width: 1220px;
+		padding: 40px;
+	} // .modal-content
+} // .modal-lightbox-slider
+
+// ==============================
+// Modal - Close
+// ==============================
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  line-height: 1em;
+  color: #cdcdcd;
+  font-size: 18px;
+  line-height: 10px;
+  cursor: pointer;
+  padding: 10px;
+} // .modal-close

@@ -1,0 +1,54 @@
+// =====================================
+// Search Bar
+// =====================================
+.search-wrap {
+  display: inline-block;
+  position: relative;
+
+  .search {
+    float: left;
+    margin: 0;
+    width: 315px;
+    max-width: percentage(315 / (315+65));
+    height: 34px;
+    border: 1px solid $color9;
+    box-sizing: border-box;
+    padding: 4px 34px 4px 10px;
+    outline: 0;
+    border-right: 0;
+  }
+
+  .search-clear {
+    color: $color7;
+    padding: 0 10px;
+    height: 100%;
+    border-top: 1px solid $color9;
+    border-bottom: 1px solid $color9;
+    display: block;
+    text-align: center;
+    background-color: $color2;
+	line-height: 32px;
+	margin-left: -34px;
+  } // .search-clear
+
+  .search-button {
+    float: left;
+    width: 65px;
+    max-width: percentage(65 / (315+65));
+    height: 34px;
+    border-radius: 0 3px 3px 0;
+    background-color: $color6;
+    border: 0;
+    outline: 0;
+    padding: 0 5px;
+    text-align: center;
+    font-size: 19px;
+  }
+
+  &.fe-input-height {
+    .search,
+    .search-button {
+      height: 100%;
+    } // .search,.search-button
+  } // .fe-input-height
+}

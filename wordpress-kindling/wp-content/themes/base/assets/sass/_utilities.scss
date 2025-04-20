@@ -1,0 +1,25 @@
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+} // .sr-only
+
+.fit-img {
+  @apply relative h-full w-full overflow-hidden z-0;
+  img {
+    @apply block w-full h-full;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+  &.bg-img {
+    @apply absolute pin-t pin-l;
+    img {
+      @apply h-full;
+    }
+  }
+}

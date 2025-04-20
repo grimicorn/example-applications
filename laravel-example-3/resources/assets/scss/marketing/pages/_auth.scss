@@ -1,0 +1,73 @@
+// ==================================
+// Authentication Page Title
+// ==================================
+.auth-page-title {
+	margin-bottom: 20px;
+	font-size: 32px;
+	font-weight: 400;
+
+	@include bp-screen-sm {
+		margin-bottom: 20px;
+	} // @include bp-screen-sm
+} // .auth-page-title
+
+// ==================================
+// Authentication Forms
+// ==================================
+.auth-form-wrap {
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	@include bp-screen-sm {
+		width: 580px;
+		max-width: 100%;
+		border: 1px solid $color7;
+		border-radius: 6px;
+		padding-top: 40px;
+		padding-bottom: 45px;
+		margin-bottom: 85px;
+	} // @include bp-screen-sm
+} // .auth-form-wrap
+
+.auth-form {
+	@include bp-screen-sm {
+		width: 385px;
+		max-width: 100%;
+		margin: 0 auto;
+	} // @include bp-screen-sm
+} // .auth-form
+
+// ==================================
+// Authentication Page Navigation
+// ==================================
+.site-content .auth-page-navigation-menu,
+.auth-page-navigation-menu {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	list-style-type: none;
+	padding: 25px 0 0;
+	margin: 0;
+
+	li {
+		margin: 0 15px 20px 0;
+
+		@include bp-screen-sm {
+			margin-bottom: 0;
+		} // @include bp-screen-sm
+
+		&:last-child {
+			margin-bottom: 0;
+			margin-right: 0;
+		} // &:last-child
+	} // li
+
+	a {
+		text-decoration: none;
+		font-size: 16px;
+		font-weight: 700;
+		text-transform: uppercase;
+    white-space: nowrap;
+	} // a
+} // .auth-page-navigation-menu

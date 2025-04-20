@@ -1,0 +1,14 @@
+{
+    "recommendations": [
+        "mikestead.dotenv",
+        "EditorConfig.editorconfig",
+        "dbaeumer.vscode-eslint",
+        "Zignd.html-css-class-completion",
+        "cjhowe7.laravel-blade",
+        "KTamas.laravel-blade",
+        "junstyle.php-cs-fixer",
+        "ikappas.phpcs",
+        "esbenp.prettier-vscode",
+        "shinnn.stylelint"
+    ]
+}

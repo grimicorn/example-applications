@@ -1,0 +1,48 @@
+// ======================================
+// Social Menu
+// ======================================
+.social-menu-navigation {
+	text-align: center;
+}
+.social-menu {
+	margin-top: 10px;
+	float: right;
+
+	@include bp-screen-xs {
+		float: none;
+		display: inline-block;
+		margin-top: 30px;
+	}
+
+	li {
+		display: block;
+		float: left;
+		margin-right: 5px;
+
+		&:last-child {
+			margin-right: 0;
+		} // &:last-child
+	} // li
+
+	a {
+		color: $color2;
+		display: block;
+		background-color: $color6;
+		font-size: 20px;
+		width: 32px;
+		height: 32px;
+		text-align: center;
+		border-radius: 4px;
+		line-height: 30px;
+
+		&.fa-google-plus {
+			font-size: 18px;
+			line-height: 32px;
+		} // &.fa-google-plus
+
+		@include link-interact {
+			text-decoration: none;
+			background-color: $color4;
+		} // @include link-interact
+	} // a
+} // .social-menu

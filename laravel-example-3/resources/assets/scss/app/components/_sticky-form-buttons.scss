@@ -1,0 +1,20 @@
+// ================================
+// Sticky Form Buttons
+// ================================
+.sticky-form-buttons {
+	.sticky-wrap {
+		opacity: 0;
+		transition: opacity 400ms ease-out;
+		pointer-events: none;
+
+		&.is-stuck {
+			pointer-events: initial;
+			opacity: 1;
+		} // &.is-stuck
+	} // .sticky-wrap
+
+	.sticky-content {
+		background-color: $color2;
+		padding: 25px 15px;
+	} // .sticky-content
+} // .sticky-form-buttons

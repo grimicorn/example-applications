@@ -1,0 +1,43 @@
+// =======================================
+// Notification Accordion
+// =======================================
+.notifications-accordion {
+	padding-bottom: 0;
+
+	.form-accordion-content,
+	&.is-open .form-accordion-content {
+		padding: 25px 0 0;
+	}
+
+	.notification-messages {
+		padding: 0 30px;
+		margin-bottom: 10px;
+	} // .notification-messages
+
+	.notification-messages-dashboard & {
+		.notification-messages {
+			padding: 0 15px;
+		} // .notification-messages
+	} // .notification-messages-dashboard &
+
+	.notification-view-all {
+		clear: both;
+		text-align: center;
+		padding: 25px;
+		border-top: 1px solid $color3;
+	} // .notification-view-all
+} // .notifications-accordion
+
+// =======================================
+// Notification Message
+// =======================================
+.notification-message {
+	cursor: pointer;
+} // .notification-message
+
+.img-circle {
+    width: 36px;
+    height: 36px;
+    padding: 10px;
+    text-align: center;
+}

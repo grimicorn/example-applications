@@ -1,0 +1,29 @@
+.job-card {
+  @apply relative border-black border rounded-lg;
+  max-width: 180px;
+}
+
+.job-card-header {
+  @apply relative bg-black px-4 py-3 text-white text-center font-bold overflow-hidden;
+  border-top-right-radius: 6px;
+
+  .job-flag.bg-flag-friday {
+    @apply border border-white;
+  }
+}
+
+.job-card .info-section {
+  @apply flex border-black;
+}
+
+.info-section div {
+  @apply border-black p-2;
+}
+
+.info-section .status-icon {
+  @apply inline-block p-2 text-xl flex-1 text-center;
+}
+
+.info-section .label {
+  @apply text-gray-300 uppercase text-sm inline-block mr-1;
+}

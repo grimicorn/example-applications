@@ -1,0 +1,6 @@
+/// Creates a grid column
+/// @param Number $columns
+@mixin grid-column($columns, $grid-columns: 12) {
+  @apply px-4 float-left;
+  width: percentage($columns/$grid-columns);
+}

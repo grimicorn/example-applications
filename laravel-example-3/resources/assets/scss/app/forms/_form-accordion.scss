@@ -1,0 +1,102 @@
+// ===============================
+// Form Accordion
+// ===============================
+.form-accordion {
+	border: 1px solid $color3;
+	padding-bottom: 15px;
+	clear: both;
+
+	&.disable-padding {
+		padding-bottom: 0;
+	} // &.disable-padding
+
+	&.is-closed {
+		margin-bottom: 1px;
+		padding-bottom: 0;
+	} // &.is-closed
+} // .form-accordion
+
+// ===============================
+// Form Accordion Header
+// ===============================
+.form-accordion-header {
+	display: flex;
+	background-color: $color3;
+	align-items: center;
+	padding: 20px 30px 25px;
+
+	.form-accordion.is-collapsible & {
+		padding-right: 15px;
+		padding-left: 20px;
+		cursor: pointer;
+	} // .form-accordion.is-collapsible &
+} // .form-accordion-header
+
+.form-accordion-header-title {
+	flex: 1;
+	color: $color7;
+	font-family: "Open Sans";
+	font-size: 21px;
+	font-weight: 400;
+	line-height: 24px;
+} // .form-accordion-header-title
+
+.form-accordion-header-icon {
+	width: 27px;
+	height: 27px;
+	border-radius: 16px;
+	border: 1px solid $color4;
+	text-align: center;
+	position: relative;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 10px;
+
+	&:before {
+		content: '';
+		width: percentage(15/27);
+		height: 1px;
+		background-color: $color4;
+		transition: transform $default-transition;
+		position: relative;
+		left: 25%;
+	} // &:before
+
+	&:after {
+		content: '';
+		width: percentage(15/27);
+		height: 1px;
+		background-color: $color4;
+		position: relative;
+		right: 25%;
+	} // &:after
+
+	.form-accordion.is-closed &:before {
+		transform: rotate(-90deg);
+	}
+} // .form-accordion-header-icon
+
+// ===============================
+// Form Accordion Content
+// ===============================
+.form-accordion-content {
+	opacity: 0;
+	transition: opacity $default-transition;
+	height: 0;
+	padding: 0;
+	overflow: hidden;
+
+	.form-accordion.is-open & {
+		display: block;
+		opacity: 1;
+		height: initial;
+		padding: 25px 30px 10px;
+		overflow: visible;
+
+		&.disable-padding {
+			padding: 0;
+		} // &.disable-padding
+	} // .form-accordion.is-open &
+} // .form-accordion-content

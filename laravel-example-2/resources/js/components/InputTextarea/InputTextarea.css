@@ -1,0 +1,7 @@
+.input-text-area textarea {
+  @apply border border-gray-400 rounded-lg p-2 w-full;
+}
+
+.input-text-area label {
+  @apply block mb-2;
+}

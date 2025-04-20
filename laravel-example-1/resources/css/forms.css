@@ -1,0 +1,13 @@
+input,
+textarea {
+    &:read-only,
+    &:disabled {
+        @apply opacity-75 cursor-not-allowed;
+    }
+}
+
+select {
+    &:disabled {
+        @apply opacity-75 cursor-not-allowed;
+    }
+}

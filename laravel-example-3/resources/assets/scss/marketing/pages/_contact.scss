@@ -1,0 +1,107 @@
+// ==============================
+// Contact Page - Variables
+// ==============================
+$contact-pg-width: 665;
+
+// ==============================
+// Contact Page
+// ==============================
+.contact-page-title {
+	font-size: 24px;
+	margin-bottom: 15px;
+	margin-top: 15px;
+
+	@include bp-screen-sm {
+		margin-bottom: 40px;
+		margin-top: 40px;
+		font-size: 36px;
+	} // @include bp-screen-sm
+} // .contact-page-title
+
+.contact-page-subtitle {
+	color: $font-color;
+	font-size: 16px;
+	font-weight: 400;
+	margin-bottom: 25px;
+
+	@include bp-screen-sm {
+		margin-bottom: 70px;
+	} // @include bp-screen-sm
+} // .contact-page-subtitle
+
+.contact-content-wrap {
+	@include bp-screen-md {
+		width: percentage($contact-pg-width/strip-unit($container-lg));
+		margin: 0 auto;
+	} // @include bp-screen-sm
+} // .contact-content-wrap
+
+// ==============================
+// Contact Page - Details
+// ==============================
+.contact-details {
+	display: flex;
+	justify-content: center;
+} // .contact-details
+
+.contact-details-inner {
+	display: flex;
+	flex-wrap: wrap;
+} // .contact-details-inner
+
+.contact-section-title {
+	color: $font-color;
+	font-size: 16px;
+	text-transform: uppercase;
+} // .contact-section-title
+
+.contact-section {
+	margin-bottom: 25px;
+	padding-right: 30px;
+	min-width: 185px;
+	max-width: 50%;
+
+	&:last-child {
+		padding-right: 0;
+		margin-bottom: 0;
+	} // &:last-child
+
+	address {
+		margin-bottom: 0;
+	} // address
+} // .contact-section
+
+// ==============================
+// Contact Page - Form
+// ==============================
+.contact-form-wrap {
+	margin-bottom: 35px;
+
+	// This allows the inputs to be on the same line as the labels.
+	@include bp-screen-sm {
+		.input-label-wrap {
+			width: 15%;
+			float: left;
+			padding-right: 15px;
+			line-height: 50px;
+			height: 50px;
+		} // .input-label-wrap
+
+		.fe-input {
+			width: 85%;
+			float: left;
+		} // .fe-input
+
+		.fe-input-preferred_contact_method-wrap {
+			.input-label-wrap {
+				width: 45%;
+				line-height: 25px;
+				height: 25px;
+			} // .input-label-wrap
+
+			.fe-input  {
+				width: 60%;
+			} // .fe-input
+		} // .fe-input-preferred_contact_method-wrap
+	} // @include bp-screen-sm
+} // .contact-form-wrap

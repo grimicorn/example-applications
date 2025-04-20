@@ -1,0 +1,43 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "devDependencies": {
+        "axios": "^0.18",
+        "browser-sync": "^2.24.7",
+        "browser-sync-webpack-plugin": "^2.2.2",
+        "cross-env": "^5.1",
+        "imagemin": "^5.3.1",
+        "laravel-mix": "^2.1.14",
+        "laravel-mix-purgecss": "^2.0",
+        "laravel-mix-tailwind": "^0.1.0",
+        "tailwindcss": "^0.6.5",
+        "vue": "^2.5.17"
+    },
+    "dependencies": {
+        "ajv": "^6.5.3",
+        "collect.js": "^4.0.26",
+        "debounce": "^1.2.0",
+        "laravel-echo": "^1.4.0",
+        "laravel-vue-pagination": "^2.0.0",
+        "lodash.filter": "^4.6.0",
+        "lodash.foreach": "^4.5.0",
+        "lodash.map": "^4.6.0",
+        "lodash.mapvalues": "^4.6.0",
+        "lodash.snakecase": "^4.1.1",
+        "pixelmatch": "^4.0.2",
+        "popper.js": "^1.14.6",
+        "puppeteer": "^1.8.0",
+        "pusher-js": "^4.3.1",
+        "request": "^2.88.0",
+        "vue-clickaway": "^2.2.2",
+        "vue-stash": "^2.0.1-beta"
+    }
+}

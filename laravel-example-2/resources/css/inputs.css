@@ -1,0 +1,38 @@
+.label-icon {
+  @apply mr-4 text-xl;
+}
+
+.input-wrap {
+  label {
+    @apply cursor-pointer relative block mb-4;
+  }
+
+  &.input-hide-label {
+    label {
+      border: 0;
+      clip: rect(0, 0, 0, 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+  }
+
+  &.input-has-error .input-label-wrap {
+    @apply text-red;
+  }
+
+  .input-error {
+    @apply text-red block text-sm;
+  }
+
+  .input-instructions {
+    @apply text-sm mb-1 block;
+  }
+
+  &.input-disabled {
+    @apply opacity-50 pointer-events-none;
+  }
+}

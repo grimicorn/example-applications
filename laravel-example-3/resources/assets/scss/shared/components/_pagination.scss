@@ -1,0 +1,47 @@
+// ===================================
+// Pagination
+// ===================================
+.pagination-wrap {
+	position: relative;
+	margin-top: 15px;
+
+	li.pagination-page {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+
+		&:before {
+			content: none;
+		}
+
+		a,
+		span {
+			text-decoration: none;
+			color: inherit;
+			padding: 0 10px;
+		}
+	}
+
+	li.pagination-next.pagination-page {
+		padding-right: 0;
+	}
+
+	li.pagination-page.is-active {
+		border-radius: 3px;
+		border: 2px solid $color4;
+	} // .is-active
+} // .pagination-wrap
+
+.pagination-navigating-cover {
+	background-color: rgba($color2, .5);
+	color: $color5;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    z-index: 99;
+} // .pagination-navigating-cover

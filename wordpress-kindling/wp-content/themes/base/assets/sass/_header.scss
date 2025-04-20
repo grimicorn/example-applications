@@ -1,0 +1,37 @@
+// ==================================
+// Header
+// ==================================
+.site-header {
+  >.container{
+      @apply flex items-center flex-wrap;
+      @screen md{
+        @apply flex-no-wrap;
+      }
+  }
+  .inner-container{
+    @apply w-full flex items-center justify-between py-2;
+    @screen md{
+      @apply w-auto inline;
+    }
+  }
+  .navigation-items-wrap{
+    @apply w-screen -mx-4;
+    @screen sm{
+      @apply w-full -mx-0;
+    }
+    @screen md{
+      @apply w-full flex justify-end flex-1;
+    }
+  }
+  .logo,
+  .logo > img,
+  .logo > svg{
+    @apply block w-full;
+  }
+  .logo-container{
+    width:130px;
+    @screen md{
+      width: 150px;
+    }
+  }
+}

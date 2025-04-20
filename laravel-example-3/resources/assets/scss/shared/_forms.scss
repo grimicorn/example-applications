@@ -1,0 +1,738 @@
+// =================================
+// Input Wrap
+// =================================
+.app-form-title {
+  margin-bottom: 35px;
+  text-align: center;
+} // .app-form-title
+
+// =================================
+// Input Wrap
+// =================================
+.fe-input-wrap {
+  width: 100%;
+  margin-bottom: 20px;
+
+  &.fe-input-hidden {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  } // &.fe-input-hidden
+
+  @include placeholder {
+    color: $color6;
+    font-weight: 400;
+  } // @include placeholder
+
+  &.has-error {
+    @include placeholder {
+      color: $color-danger;
+    } // @include placeholder
+  } // &.has-error
+} // .fe-input-wrap
+
+.fe-input-mb {
+  margin-bottom: 20px;
+}
+
+// =================================
+// Input Half
+// =================================
+.input-half {
+  width: 50%;
+  float: left;
+
+  &.is-left {
+    clear: both;
+    padding-right: 35px;
+  }
+
+  &.is-right {
+    @include clearfix;
+    padding-left: 35px;
+  }
+} // .input-half
+
+// =================================
+// Input Labels
+// =================================
+.input-label-wrap {
+  display: flex;
+
+  .hide-labels & {
+    display: none;
+  } // .hide-labels &
+} // .input-label-wrap
+
+.fe-input-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 700;
+  color: $color7;
+
+  .has-error & {
+    color: $color-danger;
+  } // .has-error &
+} // .fe-input-label
+
+.input-alignment-label-spacer {
+  padding-top: 33px;
+}
+
+.input-maxlength {
+	flex: 1;
+	text-align: right;
+
+	&.has-error {
+		color: $color-danger;
+	} // &.has-error
+} // .input-maxlength
+
+// override for historical financial year labels
+
+.input-label-wrap {
+  &.width-15 {
+    .fe-input-label {
+      width: 100%;
+    }
+  }
+}
+
+// =================================
+// Inputs
+// =================================
+.fe-input {
+  width: 100%;
+  display: block;
+
+  .has-error & {
+    border-color: $color-danger;
+  } // .has-error &
+
+  &.is-disabled,
+  &.is-readonly,
+  &[disabled],
+  &[readonly] {
+    background-color: #f0f0f0;
+	color: $color7;
+	border: 1px solid $color3;
+  } // &.is-disabled, &.is-readonly
+} // .fe-input
+
+.fe-input-height {
+  height: 46px;
+}
+
+.fe-input-small {
+  height: 34px;
+  padding: 3px 8px;
+}
+
+// =================================
+// Inputs - Text Types
+// =================================
+.fe-input-textual,
+.fe-input-type-select,
+.fe-input-type-tags,
+textarea {
+  width: 100%;
+  border-radius: 0;
+  border: 1px solid $color3;
+  padding: 10px 15px;
+  line-height: 1.5em;
+  color: $color1;
+  outline: 0;
+} // &.fe-input-type-*
+
+textarea {
+  line-height: 1.4em;
+  min-height: 70px;
+} // textarea
+
+// =================================
+// Input - Textarea
+// =================================
+.fe-input-type-textarea {
+  resize: vertical;
+} // .fe-input-type-textarea
+
+// =================================
+// Input - Select
+// =================================
+.fe-input-type-select {
+  height: 46px;
+  background-color: $color2;
+
+  .fe-input-small &,
+  &.fe-input-small {
+    height: 34px;
+    padding: 3px 8px;
+  }
+
+  .select-placeholder {
+    color: $color6;
+    font-weight: 400;
+  } // .select-placeholder
+
+  .has-error & {
+    .select-placeholder {
+      color: $color-danger;
+    } // .select-placeholder
+  } // .has-error &
+} // .fe-input-type-select
+
+// =================================
+// Input - Radio
+// =================================
+.fe-input-radio-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+
+  li {
+    float: left;
+    margin: 0 percentage(15/345) 0 0;
+
+    &:last-child {
+      margin-right: 0;
+    } // &:last-child
+  } // li
+
+  .fe-input-label {
+    margin-bottom: 0;
+    position: relative;
+    float: left;
+
+    &:before {
+      content: '';
+      display: block;
+      float: left;
+      width: 25px;
+      height: 25px;
+      border-radius: 25px;
+      border: 2px solid $color7;
+      margin-right: 10px;
+    } // &:before
+
+    &:after {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      background-color: $color4;
+      content: '';
+      width: 25px - 8px;
+      height: 25px - 8px;
+      border-radius: 25px;
+      display: none;
+    } // &:after
+  } // .fe-input-label
+
+  .active > .fe-input-label:after {
+    // scss-lint:disable SelectorDepth
+    display: block;
+  } // li.active > .fe-input-label
+
+  .fe-input-label-inner {
+    float: left;
+    line-height: 1em;
+    padding-top: 4.5px;
+    padding-bottom: 4.5px;
+  } // .fe-input-label-inner
+
+  .fe-input {
+    width: 0;
+    height: 0;
+    padding: 0;
+    opacity: 0;
+    margin: 0;
+  } // .fe-input
+} // .fe-input-radio-list
+
+// =================================
+// Input - Checkbox
+// =================================
+.fe-input-type-checkbox-wrap {
+  .fe-input-label {
+    // scss-lint:disable PropertyCount
+    margin-bottom: 0;
+    position: relative;
+	float: left;
+	display: flex;
+	align-items: center;
+
+    &:before {
+      content: '';
+      display: block;
+      float: left;
+	  width: 25px;
+	  min-width: 25px;
+      height: 25px;
+      border-radius: 6px;
+      border: 2px solid $color7;
+      margin-right: 10px;
+    } // &:before
+
+    &:after {
+      position: absolute;
+	  margin-top: -1px;
+      left: 1px;
+      content: '\2713';
+      width: 25px - 4px;
+      height: 25px - 4px;
+      line-height: 25px;
+      text-align: center;
+      color: $color4;
+      font-size: 18px;
+      display: block;
+      opacity: 0;
+      transform: scale(0);
+      transition: transform cubic-bezier(0.93, 0.21, 0.3, 1.64) 0.1s,
+        opacity 0s 0.1s;
+    } // &:after
+  } // .fe-input-label
+
+  .active > .fe-input-label:after {
+    // scss-lint:disable SelectorDepth
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+    transition: transform cubic-bezier(0.93, 0.21, 0.3, 1.64) 0.1s, opacity 0s;
+  } // li.active > .fe-input-label
+
+  .fe-input-label-inner {
+    float: left;
+    padding: 0;
+    line-height: 1.25em;
+  } // .fe-input-label-inner
+
+  .fe-input {
+    width: 0;
+    height: 0;
+    padding: 0;
+    opacity: 0;
+    margin: 0;
+  } // .fe-input
+} // .fe-input-type-checkbox-wrap
+
+// =================================
+// Input - Multi-Checkbox
+// =================================
+.fe-input-type-multi-checkbox-wrap {
+  margin-bottom: 0;
+} // .fe-input-type-multi-checkbox-wrap
+
+.fe-input-type-multi-checkboxes {
+  li {
+    margin-left: 0;
+  } // li
+} // .fe-input-type-multi-checkboxes
+
+// =================================
+// Input Error Messages
+// =================================
+.fe-input-error-message {
+  display: block;
+  clear: both;
+  width: 100%;
+  color: $color-danger;
+  padding-top: 5px;
+  text-align: left;
+} // .fe-input-error-message
+
+// =================================
+// Input Repeater
+// =================================
+.input-repeater {
+  margin-bottom: 20px;
+} // .input-repeater
+
+.input-repeater-list {
+  li {
+    display: flex;
+    padding-right: 20px;
+  } // li
+} // .input-repeater-list
+
+.input-repeater-inputs {
+  flex: 1;
+  align-items: center;
+} // .input-repeater-inputs
+
+.input-repeater-remove {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  margin-top: 9px;
+}
+
+.input-repeater-add-new {
+  cursor: pointer;
+}
+
+// =================================
+// Input - Toggle
+// =================================
+.fe-input-type-toggle-wrap {
+  display: flex;
+  align-items: center;
+
+  .input-label-wrap {
+    flex: 1;
+  } // .input-label-wrap
+
+  .fe-input-label {
+    margin-bottom: 0;
+    padding-right: 15px;
+  } // .fe-input-label
+
+  &.has-tooltip {
+	.fe-input-label {
+		padding-right: 0;
+	} // .fe-input-label
+  } // &.has-tooltip
+} // .fe-input-type-toggle-wrap
+
+.fe-input-toggle-display {
+  transition: all $default-transition;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  width: 70px;
+  height: 30px;
+  border-radius: 4px;
+  background-color: $color5;
+  color: $color2;
+  border: 3px solid $color5;
+
+  &.is-off {
+    background-color: $color6;
+    border-color: $color6;
+  } // &.is-off
+} // .fe-input-toggle-display
+
+.fe-input-toggle-display-marker {
+  position: absolute;
+  content: '';
+  display: block;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  transition: all $default-transition;
+  border-radius: 3px;
+  background-image: linear-gradient(
+    to top,
+    #c0c0c0 0%,
+    $color2 85%,
+    $color2 100%
+  );
+
+  &:before {
+    content: '';
+    background-image: linear-gradient(
+      180deg,
+      #c7c8c7 0%,
+      $color2 72%,
+      $color2 100%
+    );
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    width: 11px;
+    height: 13px;
+    border-radius: 13px;
+    margin-left: -5.5px;
+    margin-top: -6.5px;
+  } // &:before
+
+  .fe-input-toggle-display.is-off & {
+    left: 0;
+  } // .fe-input-toggle-display.is-off &
+
+  .fe-input-toggle-display.is-on & {
+    left: 50%;
+  } // .fe-input-toggle-display.is-on &
+} // .fe-input-toggle-display-marker
+
+.fe-input-toggle-display-option {
+  width: 50%;
+  text-align: center;
+  line-height: 24px;
+  display: block;
+  float: left;
+} // .fe-input-toggle-display-option
+
+.fe-input-toggle-radios {
+  width: 0;
+  height: 0;
+  display: none;
+} // .fe-input-toggle-radios
+
+// =================================
+// Input - File Single Image
+// =================================
+.fe-input-type-file-single-image-wrap {
+  position: relative;
+
+	.avatar-photo {
+		object-fit: cover;
+		height: 180px;
+		width: 180px;
+	} // .avatar-photo
+
+  input[type='file'] {
+    height: 0;
+    width: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  } // input[type="file"]
+} // .fe-input-type-file-single-image-wrap
+
+.fe-input-type-file-single-image-placeholder {
+	width: 180px;
+	height: 180px;
+	float: left;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 16px;
+	padding: 20px;
+	height: 115px;
+	border: 1px solid #939598;
+	border-radius: 6px;
+	height: 180px;
+	text-align: center;
+} // .fe-input-type-file-single-image-placeholder
+
+// =================================
+// Input - Business Category Select
+// =================================
+.fe-input-type-business-category-select-overlay {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  } // &:before
+} // .fe-input-type-business-category-select-overlay
+
+.fe-input-type-business-category-select {
+  position: relative;
+} // .fe-input-type-business-category-select
+
+.business-category-list-wrap {
+	border: 1px solid $color6;
+	padding: 10px;
+	position: absolute;
+	top: 100%;
+	z-index: 999;
+	background-color: $color2;
+	width: 100%;
+	min-width: 300px;
+	max-width: 100%;
+	max-height: 270px;
+	overflow: auto;
+
+	input[type='checkbox'] {
+		margin-right: 10px;
+		margin-top: 7px;
+  } // input[type="checkbox"]
+
+  ul {
+    margin-bottom: 0;
+
+    li {
+      margin-bottom: 5px;
+    }
+  }
+
+
+	.business-category-children {
+		padding-left: 25px;
+		width: 100%;
+	} // .business-category-children
+} // .business-category-list-wrap
+
+.business-category-select-total {
+	font-weight: bold;
+
+	&.bottom {
+		display: none;
+	}
+
+	@include bp-min-max($screen-sm, 920px) {
+		&.top {
+			display: none;
+		}
+
+		&.bottom {
+			display: block;
+		}
+	}
+
+	@include bp-max(450px) {
+		&.top {
+			display: none;
+		}
+
+		&.bottom {
+			display: block;
+		}
+	}
+} // .business-category-select-total
+
+.business-category-toggle-icon {
+  line-height: 28px;
+} // .business-category-toggle-icon
+
+// =================================
+// Input - Toggle
+// =================================
+.fe-input-boolean-wrap {
+  display: flex;
+  align-items: center;
+
+  .input-label-wrap {
+    flex: 1;
+  } // .input-label-wrap
+
+  .fe-input-label {
+    margin-bottom: 0;
+    padding-right: 15px;
+  } // .fe-input-label
+
+  .fe-input-type-radio-wrap {
+    margin-bottom: 0;
+    padding: 0;
+  } // .fe-input-type-radio-wrap
+
+  .fe-input-wrap {
+    width: auto;
+    display: flex;
+  } // .fe-input-wrap
+
+  .fe-input-radio-list {
+    display: flex;
+
+    li {
+      padding-right: 0;
+
+      &:first-child {
+        width: 90px;
+      } // &:first-child
+
+      &:last-child {
+        width: 90px;
+        padding-right: 0;
+        margin-right: 0;
+      } // &:last-child
+    } //  li
+  } // .fe-input-radio-list
+} // .fe-input-boolean-wrap
+
+// =================================
+// Input - Multi-file upload
+// =================================
+.input-multi-file {
+	&.dropzone-not-available {
+		display: flex;
+		align-items: center;
+	} // &.dropzone-not-available
+} // .input-multi-file
+
+.input-multi-file-dropzone {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px dashed $color6;
+  position: relative;
+
+  .dropzone-not-available > & {
+	border: 0;
+	flex: 1;
+	padding-left: 0;
+  }
+
+  .input-multi-file.has-error & {
+    color: $color-danger;
+    border-color: $color-danger;
+  } // .input-multi-file.has-error &
+
+  input[type='file'] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999999;
+    width: 100%;
+    opacity: 0;
+  } // input[type="file"]
+} // .input-multi-file-dropzone
+
+// =================================
+// Input - Range
+// =================================
+.fe-input-type-range-wrap {
+  .vue-slider-component {
+    padding-left: 0 !important; // Overwrites external component in-line styles
+    padding-right: 0 !important; // Overwrites external component in-line styles
+
+    .vue-slider {
+      background-color: #eabe99;
+      box-shadow: none;
+      border: 0;
+    } // .vue-slider
+
+    .vue-slider-process,
+    .vue-slider-dot {
+      background-color: $color4;
+      box-shadow: none;
+      border: 0;
+    } // .vue-slider-dot
+  } // .vue-slider-component
+} // .fe-input-type-range-wrap
+
+// =================================
+// Input - Min/Max Price
+// =================================
+.input-min-max-price {
+  @include bp-screen-sm {
+    display: flex;
+  } // @include bp-screen-sm
+
+  .price-range-to {
+    line-height: 50px;
+    display: none;
+
+    @include bp-screen-sm {
+      display: block;
+    } // @include bp-screen-sm
+  } // .price-range-to
+} // .input-min-max-price
+
+// =================================
+// Input - Ratings
+// =================================
+.input-rating-stars {
+	margin-bottom: 10px;
+} // .input-rating-stars
+
+.input-rating-star {
+	margin: 0 5px 0 0;
+	cursor: pointer;
+	font-size: 20px;
+} // .input-rating-star
+
+
+// =================================
+// reCAPTCHA style overrides
+// =================================
+.g-recaptcha div:first-child {
+  margin: 0 auto 15px;
+}

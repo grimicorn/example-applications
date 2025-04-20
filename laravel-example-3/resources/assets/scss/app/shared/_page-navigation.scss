@@ -1,0 +1,47 @@
+// ==============================
+// Page Navigation - Menu
+// ==============================
+.page-navigation {
+	margin: 0px;
+} // .page-navigation
+
+.app-content-wrap .page-navigation-menu {
+	margin-bottom: 0;
+	display: flex;
+
+	li {
+		float: left;
+		margin-bottom: 0;
+
+		a {
+			display: block;
+			width: 100%;
+			text-align: center;
+			text-decoration: none;
+			line-height: 1em;
+			padding: 15px 5px 20px;
+			font-weight: 700;
+			text-transform: uppercase;
+			text-align: center;
+			color: $color5;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		} // a
+
+		&.active a,
+		a:active,
+		a:focus {
+			background-color: $color2;
+			color: $color6;
+		} // &.active
+
+		&.active a:hover {
+			background-color: #fff;
+		}
+		a:hover {
+			background-color: #ccc;
+		}
+	} // li
+} // .page-navigation-menu

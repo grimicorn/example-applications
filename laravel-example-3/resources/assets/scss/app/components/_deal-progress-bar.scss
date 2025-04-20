@@ -1,0 +1,105 @@
+.pb {
+  position: relative;
+  padding-top: 75px;
+  padding-bottom: 50px;
+  text-align: center;
+
+  .pb--common {
+    height: 27px;
+    width: 27px;
+    @extend .rounded;
+    @extend .fc-color2;
+	margin: 0 -4px;
+	position: relative;
+	top: -7px;
+
+    &::before {
+      padding-top: 5px;
+      display: block;
+    }
+  }
+
+  .pb--label {
+    position: absolute;
+    left: -290%;
+    width: 130px;
+  }
+
+  .pb--unfilled {
+    border: 2px solid $color9;
+  }
+
+  .pb--filled {
+    @extend .bg-color5;
+  }
+
+  .pb--bar {
+    width: 100px;
+    height: 2px;
+    background-color: $color9;
+    margin-bottom: 12px;
+
+    &.pb--bar--filled {
+      @extend .bg-color5;
+    }
+
+    &.pb--bar--node {
+      position: relative;
+
+      .pb--bar--node--tooltip {
+        position: absolute;
+        right: 0;
+      }
+
+      .pb--bar--node--circle {
+        height: 16px;
+        width: 14px;
+        line-height: 16px;
+        text-align: center;
+        position: absolute;
+        right: -7px;
+        top: -8px;
+        border-radius: 8px;
+        color: $color4;
+        background-color: $color2;
+	  }
+
+	  .pb--bar--node--circle--label {
+		position: absolute;
+		bottom: 100%;
+		line-height: 1.2em;
+		width: 150px;
+		text-align: center;
+		margin-left: -75px;
+		left: 50%;
+		height: 40px;
+		margin-bottom: 10px;
+		color: $color5;
+		text-transform: uppercase;
+	  } // .pb--bar--node--circle--label
+
+      &.pb--node--filled .pb--bar--node--circle--icon {
+        color: $color5;
+      }
+    }
+  }
+}
+
+.pb--bar--node--tooltip {
+  .tooltip.top {
+    margin-top: -15px;
+  }
+
+  .tooltip.right {
+    margin-left: 15px;
+  }
+
+  .tooltip.bottom {
+    top: 20px;
+    left: 50%;
+  }
+
+  .tooltip.left {
+    margin-left: -15px;
+  }
+}

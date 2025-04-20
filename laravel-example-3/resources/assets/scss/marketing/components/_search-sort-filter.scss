@@ -1,0 +1,43 @@
+// ==============================
+// Search sort
+// ==============================
+.marketing-search-sort-filter {
+  max-width: 100%;
+
+  @include bp-screen-xs() {
+    width: 100%;
+  }
+
+  .fe-input-type-select-wrap {
+    min-width: 165px;
+    margin: 0;
+    padding-right: 15px;
+
+    @include bp-screen-xs() {
+      padding: 0;
+      margin-bottom: 15px;
+    }
+
+  } // .fe-input-type-select-wrap
+} // .marketing-search-sort-filter
+
+// ==============================
+// Search per page & results
+// ==============================
+.marketing-search-per-page-results {
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  @include bp-max(400px) {
+    text-align: center;
+  }
+} // .marketing-search-per-page-results
+
+// ==============================
+// Search per page
+// ==============================
+.marketing-search-per-page {
+  width: auto;
+  white-space: nowrap;
+  max-width: 100%;
+} // .marketing-search-per-page

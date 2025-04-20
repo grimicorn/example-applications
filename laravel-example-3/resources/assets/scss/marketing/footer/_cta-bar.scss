@@ -1,0 +1,38 @@
+//================================
+// Footer - CTA Bar
+//================================
+.footer-cta-bar {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	@include bp-min(500px) {
+		flex-direction: row;
+	} // @include bp-max(500px)
+
+	@include bp-screen-sm {
+		padding: 2.5em 15px;
+	} // @include bp-screen-sm
+} // .footer-cta-bar
+
+.footer-cta-bar-content {
+	font-size: 20px;
+	line-height: 1.25em;
+	padding-right: 15px;
+	text-align: center;
+	margin-bottom: 20px;
+	color: $color2;
+	text-transform: none;
+
+	@include bp-min(500px) {
+		text-align: left;
+		margin-bottom: 0;
+	} // @include bp-max(500px)
+
+	@include bp-screen-sm {
+		font-size: 28px;
+		flex: 1;
+	} // @include bp-screen-sm
+} // .footer-cta-bar-content

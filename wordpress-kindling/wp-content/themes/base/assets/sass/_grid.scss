@@ -1,0 +1,32 @@
+.container {
+  @apply mx-auto px-4;
+  max-width: 100%;
+  width: 100%;
+
+  @screen sm {
+    width: config('screens.sm');
+  }
+
+  @screen md {
+    width: config('screens.md');
+  }
+
+  @screen lg {
+    width: config('screens.lg');
+  }
+
+  @screen xl {
+    width: config('screens.xl');
+  }
+
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+.row {
+  @apply -mx-4;
+  width:calc(100% + 2rem);
+}

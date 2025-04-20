@@ -1,0 +1,31 @@
+// =====================================
+// Application - Listing Section Completion Bar
+// =====================================
+.listing-section-completion-bar-wrap {
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1em;
+} // .listing-section-completion-bar-wrap
+
+.listing-section-completion-label {
+	margin-right: 10px;
+} // .listing-section-completion-label
+
+.listing-section-completion-bar {
+	width: 148px;
+	height: 12px;
+	border-radius: 5px;
+	overflow: hidden;
+	margin-right: 10px;
+} // .listing-section-completion-bar
+
+.listing-section-completion-bar-inner {
+	height: 100%;
+	border-radius: 5px;
+} // .listing-section-completion-bar-inner
+
+.listing-section-completion-percentage {
+	width: 40px;
+ } // .listing-section-completion-percentage

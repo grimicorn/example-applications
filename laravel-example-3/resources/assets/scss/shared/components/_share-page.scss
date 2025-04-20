@@ -1,0 +1,29 @@
+.share-page {
+  display: inline-block;
+  position: relative;
+} // .share-page
+
+.share-page-icon {
+  font-color: $color11;
+  font-size: 28px;
+  cursor: pointer;
+} // .share-page-icon
+
+.share-page-networks {
+  position: absolute;
+  white-space: nowrap;
+  margin-left: -50%;
+  top: 100%;
+  padding-top: 10px;
+} // .share-page-networks
+
+.share-page-network {
+  cursor: pointer;
+  font-size: 22px;
+  margin-right: 10px;
+  display: inline-block;
+
+  &:last-child {
+    margin-right: 0;
+  } // &:last-child
+} // .share-page-network

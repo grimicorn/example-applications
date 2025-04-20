@@ -1,0 +1,18 @@
+/*
+Background
+*/
+
+.bg-auth {
+  background-color: #232a4a;
+  background-image: url('/images/fnc-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*
+Login Logo
+*/
+.login-logo {
+  margin-top: -17px;
+  max-height: 35px;
+}

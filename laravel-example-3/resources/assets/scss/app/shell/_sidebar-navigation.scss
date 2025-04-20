@@ -1,0 +1,84 @@
+// =====================================
+// Application - Sidebar
+// =====================================
+.app-sidebar {
+	float: left;
+	width: percentage(240 / 1326);
+	margin-right: 25px;
+	// margin-right: percentage(80 / 1326);
+	min-height: 1px;
+	width: 200px;
+	min-width: 200px;
+
+	> * {
+		margin-bottom: 25px;
+
+		&:last-child {
+			margin-bottom: 0;
+		} // &:last-child
+	} // > *
+} // .app-sidebar
+
+// =====================================
+// Sidebar Navigation
+// =====================================
+.sidebar-navigation-menu {
+	padding: 10px 0;
+	background-color: $color2;
+	margin-bottom: 0;
+
+	li {
+		padding: 10px 15px;
+
+		.sidebar-navigation-parent {
+			color: $color7;
+			font-size: 14px;
+			display: flex;
+			white-space: nowrap;
+			align-items: center;
+
+			&:hover,
+			&:focus,
+			&:active {
+				text-decoration: none;
+			}
+
+			.icon-left,
+			.icon-right {
+				color: $color5;
+
+				// icon size overrides
+				&.favorite-icon {
+					font-size: 20px;
+				}
+				&.exchange-space-icon {
+					font-size: 15px;
+				}
+				&.admin-icon {
+					font-size: 18px;
+				}
+				&.styleguide-icon {
+					font-size: 18px;
+				}
+			}
+
+			.icon-left {
+				padding-right: 5px;
+				width: 30px;
+			}
+
+			.icon-right {
+				margin-left: 5px;
+				color: $color4;
+			}
+		}
+
+		&.is-active {
+			background-color: $color8;
+
+			a {
+				color: $color2;
+			} // a
+		} // .is-active
+	} // li
+} // .sidebar-navigation

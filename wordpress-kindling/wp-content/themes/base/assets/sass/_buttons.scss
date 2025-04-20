@@ -1,0 +1,14 @@
+.btn,
+a.btn,
+input[type="submit"]{
+  @apply inline-block text-center text-white p-4 cursor-pointer leading-tight text-white bg-theme-1;
+  transition: 300ms ease-in-out;
+  transition-property:color,background-color,border,text-decoration;
+  &:hover{
+    @apply bg-theme-2 text-black;
+  }
+  &.disabled{
+    @apply opacity-75 pointer-events-none;
+  }
+}
+

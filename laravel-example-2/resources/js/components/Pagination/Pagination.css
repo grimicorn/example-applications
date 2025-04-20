@@ -1,0 +1,31 @@
+.pagination {
+  @apply flex mt-4;
+}
+
+.page-item {
+  @apply py-2 px-3 border-r border-t border-b border-gray-400 flex items-center text-sm;
+
+  &:first-child {
+    @apply border-l;
+  }
+
+  a {
+    @apply no-underline font-bold text-gray-400;
+  }
+
+  &.active {
+    @apply bg-red-dark;
+
+    a {
+      @apply text-white;
+    }
+  }
+}
+
+.pagination-next-nav {
+  @apply bg-gray-100 rounded-tr rounded-br text-xs;
+}
+
+.pagination-prev-nav {
+  @apply bg-gray-100 rounded-tl rounded-bl text-xs;
+}

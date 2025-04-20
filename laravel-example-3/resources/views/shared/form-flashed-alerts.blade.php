@@ -1,0 +1,2 @@
+{{-- Flashed Alerts --}}
+<alerts></alerts>

@@ -1,0 +1,14 @@
+/// Converts pixels to rems
+/// @param String | Number $pixels - The dimension in pixels.
+/// @param String | Number $context 16 - The base dimension in pixels.
+@function pxToRem($pixels, $context: 16) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}

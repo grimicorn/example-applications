@@ -1,0 +1,54 @@
+// ====================================
+// LC Rating Component
+// ====================================
+.lcr-wrap {
+	// display: flex;
+	// align-items: center;
+} // .lcr-wrap
+
+.lcr-wrap-label {
+	font-weight: bold;
+	margin-right: 25px;
+	line-height: 1em;
+} // . lcr-wrap-label
+
+.lcr-star-wrap {
+	margin-right: 5px;
+	display: block;
+
+	&:last-child {
+		margin-right: 0;
+	}
+} // .lcr-star-wrap
+
+.lcr-star-stack {
+	width: 1em;
+    line-height: 1em;
+    height: 1em;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+
+	.lcr-star {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		text-align: center;
+	} // .lcr-star
+} // .lcr-star-stack
+
+.lcr-star-empty {
+	@extend .fa;
+	@extend .fa-star-o;
+} // .lcr-star-empty
+
+.lcr-star-whole {
+	@extend .fa;
+	@extend .fa-star;
+} // .lcr-star-whole
+
+.lcr-star-half {
+	@extend .fa;
+	@extend .fa-star-half;
+	margin-left: -.2em;
+} // .lcr-star-half

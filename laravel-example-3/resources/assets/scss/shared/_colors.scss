@@ -1,0 +1,48 @@
+// ========================================
+// Colors
+// ========================================
+$color1: #000 !default;
+$color2: #fff !default;
+$color3: #e0e0e0 !default; // Light Grey
+$color4: #d77f34 !default; // Burnt Orange
+$color5: #0b7285 !default; // Teal Blue
+$color6: #939598 !default; // Medium Grey
+$color7: #666 !default; // Dark Gray
+$color8: #8ed0dc !default; // App Light Blue
+$color9: #e4e4e4 !default; // Application background gray
+$color10: #a5a5a5 !default;
+$color11: #5d5d66 !default;
+$color12: #efefef !default; //Lighter Grey (Alternating Cards)
+
+$font-color: $color7;
+
+// ===============================================
+// State Colors
+// ===============================================
+$color-success : #5cb85c;
+$color-info    : #5bc0de;
+$color-warning : #f0ad4e;
+$color-danger  : #d9534f;
+
+
+// ========================================
+// Theme Color Map
+// ========================================
+$theme-colors: (
+	color1 : $color1,
+	color2 : $color2,
+	color3 : $color3,
+	color4 : $color4,
+	color5 : $color5,
+	color6 : $color6,
+	color7: $color7,
+	color8: $color8,
+	color9: $color9,
+	color10: $color10,
+	color11: $color11,
+	color12: $color12,
+	success: $color-success,
+	info: $color-info,
+	warning: $color-warning,
+	danger: $color-danger,
+);

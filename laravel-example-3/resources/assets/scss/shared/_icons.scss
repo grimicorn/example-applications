@@ -1,0 +1,121 @@
+// ================================================
+// Icons
+// scss-lint:disable PlaceholderInExtend
+// ================================================
+.exchange-space-icon {
+  @extend .fa;
+  @extend .fa-handshake-o;
+  @extend .fa-lg;
+}
+
+.historical-financials-icon,
+.buyers-icon {
+  @extend .fa;
+  @extend .fa-usd;
+} // .historical-financials-icon,.buyers-icon
+
+.sellers-icon {
+  @extend .fa;
+  @extend .fa-building-o;
+} // .sellers-icon
+
+.professionals-icon,
+.brokers-icon {
+  @extend .fa;
+  @extend .fa-users;
+}
+
+.list-completion-icon {
+  @extend .fa;
+} // .list-completion-icon
+
+.diligence-center-icon {
+  @extend .fa;
+} // .diligence-center-icon
+
+.document-icon {
+  @extend .fa;
+  @extend .fa-files-o;
+} // .document-icon
+
+.dashboard-icon {
+  @extend .fa;
+  @extend .fa-tachometer;
+  @extend .fa-lg;
+} // .dashboard-icon
+
+.buyer-inquiry-icon {
+  @extend .fa;
+  @extend .fa-envelope;
+  @extend .fa-lg;
+} // .buyer-inquiry-icon
+
+.favorite-icon {
+  @extend .fa;
+  @extend .fa-heart-o;
+  @extend .fa-lg;
+} // .favorite-icon
+
+.listing-icon {
+  @extend .fa;
+  @extend .fa-list;
+  @extend .fa-lg;
+} // .listing-icon
+
+.profile-icon {
+  @extend .fa;
+  @extend .fa-user-circle;
+  @extend .fa-lg;
+} // .profile-icon
+
+.watchlist-icon {
+  @extend .fa;
+  @extend .fa-binoculars;
+  @extend .fa-lg;
+} // .watchlist-icon
+
+.admin-icon {
+  @extend .fa;
+  @extend .fa-list-alt;
+}
+
+.styleguide-icon {
+  @extend .fa;
+  @extend .fa-book;
+}
+
+.preview-icon {
+  @extend .fa;
+  @extend .fa-eye;
+}
+
+.save-icon {
+  @extend .fa;
+  @extend .fa-floppy-o;
+} // .save-icon
+
+.icon-count {
+  line-height: 30px;
+  padding: 3px;
+  display: inline-block;
+  border-radius: 50%;
+  color: $color2;
+  min-width: 36px;
+  height: 36px;
+  background-color: $color5;
+  font-size: 14px;
+}
+
+.notification-icon {
+ @extend .fa;
+ @extend .fa-bell;
+}
+
+.lcr-star-old {
+	line-height:92px;
+}
+
+.lcr-star-old-half {
+	line-height:92px;
+	margin-left: -13px;
+}

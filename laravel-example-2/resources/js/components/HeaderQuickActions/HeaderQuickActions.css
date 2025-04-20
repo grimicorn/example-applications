@@ -1,0 +1,16 @@
+.dropdown-content {
+  min-width: 175px;
+
+  li {
+    @apply text-left p-1;
+  }
+
+  a,
+  button {
+    @apply no-underline text-gray-400 text-sm p-2 block;
+
+    &:hover {
+      @apply underline;
+    }
+  }
+}

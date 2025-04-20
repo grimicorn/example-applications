@@ -1,0 +1,69 @@
+.button,
+button {
+    &:disabled {
+        @apply cursor-not-allowed
+    }
+
+    svg.fill-current {
+        fill: currentColor !important;
+    }
+}
+
+@layer components {
+    .button-base {
+        @apply px-6 py-3 font-bold no-underline rounded shadow-sm;
+    }
+
+    .button {
+        @apply text-white button-base bg-primary-900;
+
+        &:hover,
+        &:active,
+        &:focus,
+        &.active {
+            @apply bg-primary-700;
+        }
+    }
+}
+
+.button-outline {
+    @apply bg-transparent border button-base border-primary-900 text-primary-900;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &.active {
+        @apply border-primary-700 text-primary-700;
+    }
+}
+
+.button-link {
+    @apply underline text-primary-900;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &.active {
+        @apply text-primary-700;
+    }
+}
+
+.button-inverse {
+    @apply bg-white button text-primary-900;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &.active {
+        @apply bg-gray-200;
+    }
+}
+
+.button-sm {
+    @apply px-3 py-2 text-sm;
+}
+
+.button-xs {
+    @apply px-2 py-1 text-xs;
+}
+

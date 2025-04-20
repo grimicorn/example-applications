@@ -1,0 +1,51 @@
+Table 1,,,
+Listings,Listing 1,Listing 2,Listing 3
+user_id,,,
+published,TRUE,TRUE,FALSE
+type,Established business,Established business,Established business
+title,Popular local brewery and restaurant looking for a new owner,"Restaurant with real estate, priced to sell",High margin restaurant franchise. Turn-key operation!
+business_name,Main Street Brewery LLC,Smith Family Restaurant INC.,Chicken King WUSTL LLC
+asking_price,1200000,900000,4000000
+name_visible,TRUE,FALSE,TRUE
+summary_business_description,Grab a once in a lifetime opportunity to own a part of the resurgent downtown entertainment landscape!,Own a St. Louis Landmark with one of the most recognized names in town!,Rare opportunity to own a successful Chicken King franchise and join the fastest growing restaurant chain in the United States.
+business_description,"Located in historic Laclede’s Landing, a designated “entertainment” area Main Street Brewery is acclaimed for traditional and gourmet American food, award-winning lager beer offerings, and premium event space. A wide variety of indoor and outdoor dining, bar and entertainment spaces within the Main Street Brewery facility make this a popular destination for a wide variety of patrons including families, tourists, business people, sports fans and the nightclub crowd. Catering and party venues are utilized for everything from corporate meetings to wedding receptions. Craft beer is brewed onsite and is also distributed throughout the metro area.",his incredible restaurant opened decades ago featuring a great menu and a relaxed atmosphere. This family has built their reputation and business on great food and never lost touch with where they started. Without any doubt they are one of the areas most successful restaurants. Located in a historic area and room enough to handle any party.  You can own a St. Louis Landmark Restaurant with one of the most recognized names in town. Very profitable with huge opportunity for an energetic new owner to expand the catering and banquet components of the business.  You can count on training and support of the current owner. Owning the Real Estate makes this rare business an even better long term investment!,"Successful Chicken King franchise with a prime location near Washington University campus. As one of the most popular chicken franchise companies in the U.S., the business has been highly popular with students. While the business is located within walking distance to the main campus, a new buyer could potentially explore delivery options to campus that could be quickly accessible by bike and open up additional revenue while providing students a part-time employment opportunity. The business currently employees mostly part-time student workers but has a full time manager and assistant manager that run the day-to-day operations.
+Business gets significant support from the franchise parent in exchange for a 5% of revenue, paid quarterly. Benefits include strong brand, advertising and operational support including access to national supply chain of inventory. Business runs on franchise provided inventory and sales management platform."
+business_category_id,Retail Sales,Retail Sales,Retail Sales
+business_sub_category_id,Restaurants,Restaurants,Restaurants
+year_established,1995,1971,2007
+number_of_employees,72,50,"20, 18 part time"
+revenue,3000000,1878828,2343554
+discretionary_cash_flow,175000,146856,795400
+address_1,670 Main St.,401 First Ave.,1 Brookings Drive
+address_2,Suite 100,,
+city,Clayton,Ferguson,St. Louis
+state,MO,MO,MO
+zip_code,63105,63136,63105
+address_visible,TRUE,FALSE,TRUE
+location_description,Downtown location with lots of street traffic near ballpark village. 2 floors of seating plus bar and lounge area.,Primary position in a large shopping mall. 5000 sqft of space!,Prime location right next to University.
+pre_tax_earnings,120000,110871,730400
+ebitda,200000,196704,835300
+real_estate_included,FALSE,TRUE,TRUE
+real_estate_estimated,N/A,300000,1000000
+real_estate_description,Current lease has 3 years remaining. Buyer may have to arrange new terms with property owner,Real estate and land is owned by the business. ,Location is owned by the business. 2000 sqft
+fixtures_equipment_included,TRUE,TRUE,TRUE
+fixtures_equipment_estimated,375000,50000,100000
+fixtures_equipment_description,"Kitchen equipment, dining room and bar fixtures","Kitchen equipment, dining room and bar fixtures","Display cabinets, tables, chairs and delivery bikes"
+inventory_included,TRUE,FALSE,TRUE
+inventory_estimated,10000,N/A,5000
+inventory_description,Restaurant sells T-Shirts and other branded items that will transfer,New buyer will need to procure during a transition period to be determined.,Everything is included
+business_overview,SEE COMMENT,SEE COMMENT,SEE COMMENT
+products_services,"Microbrewery, restaurant and event venue. Business also sells branded merchandise such as T-Shirts, Mugs and other items for sale in the restaurant as well as on its website. ",Great American style menu,"Provides a simple but loved menu of various fried chicken options, as well as salads and other health conscious items. Currently only offers dine-in but could expand to include local delivery."
+market_overview,"The craft beer industry continues to grow in the United States. During and since the recession, the craft beer market has grown at the expense of the import beer market. The growing trend to “buy local” benefits the craft beer market as well. Morgan Street is the only lager brewery of the 18 microbreweries in St. Louis and has won awards for its craft beers. The quality food, craft beer, atmosphere varieties and prime location combine to make this restaurant/brewery a unique, popular destination.","Starting a restaurant from scratch is an incredibly daunting task, but with this investment, the work has been done for you!  The family has built their business on the promise of great food and you'll inherit that head start.","Great university location with a strong recurring customer base. The business is the only fast casual restaurant of its kind within walking distance to the school, making it attractive to the student body, while also being in a high-trafficed area for drive-in customers. "
+competitive_position,"The area is home to a number of other establishments, however there is a real sense of cooperation amongst the business owners.  The idea is to grow the pie, not compete over the same customer!","With a prime location, potential customers would have to drive right past your restaurant to get to any of the nearby eateries--a clear advantage to be sure!","Competes with Chick-fil-A and other fast casual restaurants, but one of few within close proximity to the campus. "
+business_performance_outlook,Recent passage of local bill will revitalize the downtown area and provide more green space and pedestrian access/attraction.  Use expanded capacity and distribution to both commercial and retail outlets to extend brand recognition farther outside of St. Louis area. Increase targeted marketing in programs of events/games at area sporting and convention venues. Expand catering operations through more aggressive promotion. Utilize upper level space as leasable office space to increase revenue.,"While growth has been slow lately, that's more a reflection on the ownership shifting to a later stage in their development and wanting to slow down.  In the hands of a right owner, there's countless opportunities for success: expanded lunch menu, renovating and enlarging the outdoor patio, etc.","After a period of strong growth after opening, the business has stabilized in recent years, but has never had a down year in revenue or owner's profit. Opportunity for buyer to join a great franchise and make a steady living. Future growth opportunities available from a potential delivery service and increased catering revenue."
+financing_available,TRUE,TRUE,FALSE
+financing_available_description,Limited to qualified buyers,Will provide up to 30% of purchase price.,Strong cash flows should support bank financing for credible buyers
+support_training,TRUE,TRUE,FALSE
+support_training_description,Ownership is retiring and is committed to successfully introducing and integrating the buyer into the systems and procedures of the company.,Current owner is happy to accommodate new buyer to help ensure smooth transition for current employees.,Franchisor will provide necessary training
+reason_for_selling,Looking to retire and want to transition the business to a new family,Retirement,Looking to pursue scalable opportunities as franchisor mandates can only operate one location
+desired_sale_date,1Q 2018 or earlier,Within the next twelve months,Next six months
+seller_non_compete,TRUE,TRUE,FALSE
+seller_non_compete_description,SEE COMMENT,SEE COMMENT,SEE COMMENT
+Website_links,"mainstreetbrewsmo.com, stlbrews.com/MainStreet",,chickenking.com
+Listing_photo,Entrancephoto.jpeg,,chickenkinglogo.jpeg

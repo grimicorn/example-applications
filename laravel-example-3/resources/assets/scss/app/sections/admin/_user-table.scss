@@ -1,0 +1,60 @@
+// =================================
+// User Table
+// =================================
+.user-table-wrap {
+
+	.sort-table {
+		font-size: 12px;
+		line-height: 1.5em;
+
+		tr {
+			height: 68px;
+		}
+
+		th {
+			.sort-table-label {
+				text-decoration: none;
+			}
+
+			.sort-table-sort-icons {
+				margin-left: 5px;
+			}
+		}
+
+		td {
+			vertical-align: top;
+		}
+
+		.th-name {
+			width: 175px;
+		}
+
+		.th-role {
+			width: 115px;
+		}
+
+		.th-email {
+			width: 200px;
+		}
+
+		.th-balance {
+			width: 100px;
+			text-align: center;
+		}
+
+		.th-type {
+			width: 100px;
+			text-align: center;
+		}
+
+		.th-listings {
+			width: 100px;
+			text-align: center;
+		}
+
+		.th-login {
+			width: 100px;
+			text-align: center;
+		}
+	}
+}

@@ -1,0 +1,24 @@
+// ===========================
+// Clipboard.js
+// ===========================
+button.js-copy,
+input[type="submit"].js-copy {
+	&.copied {
+		background-color: $brand-success;
+		color: $color2;
+		border-color: $brand-success;
+		outline-color: $brand-success;
+
+		&:hover,
+		&:focus,
+		&.focus {
+			background-color: darken($brand-success, 5%);
+			color: $color2;
+			border-color: darken($brand-success, 8%);
+		} // &:hover, &:focus, &.focus
+
+		&:before {
+			margin-right: 10px;
+		} // &:before
+	} // &.copied
+} // .js-copy

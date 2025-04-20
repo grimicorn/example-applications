@@ -1,0 +1,19 @@
+input[type='checkbox'] {
+  @apply appearance-none border border-black rounded-lg mr-4 relative;
+  height: 20px;
+  width: 20px;
+}
+
+input[type='checkbox']:checked::after {
+  content: '';
+  height: 11px;
+  left: 5px;
+  top: 1px;
+  transform: rotate(45deg);
+  width: 6px;
+  @apply block absolute border-b border-r border-black outline-none;
+}
+
+.input-wrap.input-checkbox label {
+  @apply flex items-center mb-4 font-bold text-lg text-gray-400;
+}

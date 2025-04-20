@@ -1,0 +1,16 @@
+{
+    "overrides": [
+        {
+            "files": "*.scss",
+            "options": {
+                "singleQuote": true
+            }
+        },
+        {
+            "files": "*.scss",
+            "options": {
+                "trailingComma": "all"
+            }
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+// ======================================
+// Task Due Date checkbox
+// ======================================
+.default-task-due-date-enabled-checkbox {
+	width: 0;
+	height: 0;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
+// ======================================
+// Task Due Date Input
+// ======================================
+.default-task-due-date-input {
+	min-width: 0;
+	width: 50px;
+} // .default-task-due-date-input
+
+// ======================================
+// Task Due Date select
+// ======================================
+.default-task-due-date-select {
+	min-width: 1px;
+	margin-right: 5px;
+} // .default-task-due-date select

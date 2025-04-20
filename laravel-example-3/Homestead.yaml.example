@@ -1,0 +1,19 @@
+ip: 192.168.10.10
+memory: 2048
+cpus: 1
+provider: virtualbox
+authorize: ~/.ssh/id_rsa.pub
+keys:
+    - ~/.ssh/id_rsa
+folders:
+    -
+        map: ~/Code/firmexchange.com
+        to: /home/vagrant/Code/firmexchange-com
+sites:
+    -
+        map: firmexchange.test
+        to: /home/vagrant/Code/firmexchange-com/public
+databases:
+    - firmexchange
+name: firmexchange-com
+hostname: firmexchange-com

@@ -1,0 +1,48 @@
+// ================================
+// Form Action
+// ================================
+.form-action-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  background-color: $color2;
+
+  &.action-bar {
+    padding: 25px 20px;
+	margin-bottom: 0;
+	flex-wrap: wrap;
+  }
+} // .form-action-bar
+
+.form-action-bar-left,
+.form-action-bar-right {
+  display: flex;
+  align-items: center;
+
+  > * {
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  } // > *
+} // .form-action-bar-left
+
+.form-action-bar-left {
+  flex: 1;
+  justify-content: flex-start;
+} // .form-action-bar-left
+
+.form-action-bar-right {
+  justify-content: flex-end;
+} // .form-action-bar-right
+
+.form-action-bar-info {
+	span {
+		font-weight: bold;
+		margin-right: 250px;
+		font-size: 13px;
+		line-height: 1.5em;
+		display: block;
+	}
+}

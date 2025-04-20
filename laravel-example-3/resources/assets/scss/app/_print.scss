@@ -1,0 +1,175 @@
+@media print {
+	@import "variables";
+	@import "colors";
+	// ========================================
+	// Body
+	// ========================================
+	body {
+		color: $font-color !important;
+		font-family: $font1;
+		font-size: $base-font-size !important;
+		font-weight: 400 !important;
+		line-height: $base-font-line-height !important;
+	} // body
+
+	h1,
+	.h1 {
+		color: $color4 !important;
+		font-size: 26px !important;
+		font-weight: 400 !important;
+		//line-height: .8333333333em;
+		text-transform: uppercase;
+
+		@include bp-screen-xs {
+			font-size: 26px;
+		}
+	} // h1
+
+	h2,
+	.h2 {
+		color: $color4 !important;
+		font-size: 23px !important;
+		line-height: 1em !important;
+		font-weight: 400 !important;
+		margin-bottom: 35px !important;
+
+		@include bp-screen-xs {
+			font-size: 26px;
+		}
+	} // h2
+
+	h3,
+	.h3 {
+		font-size: 18px !important;
+		font-weight: 700 !important;
+		color: $color5 !important;
+		margin-bottom: 30px !important;
+		line-height: 1.25em !important;
+
+	}
+
+	h1.subhead,
+	h2.subhead,
+	h3.subhead,
+	h4.subhead,
+	h5.subhead,
+	h6.subhead,
+	.h1.subhead,
+	.h2.subhead,
+	.h3.subhead,
+	.h4.subhead,
+	.h5.subhead,
+	.h6.subhead,
+	.subhead {
+		font-size: 16px !important;
+		color: $color7 !important;
+		font-weight: 400 !important;
+	}
+
+	a {
+		text-decoration: underline;
+
+		&:link {
+			color: $color4 !important;
+		} // &:link
+
+		&:visited {
+			color: $color5 !important;
+		} // &:visited
+
+		@include link-interact {
+			color: hover($color4) !important;
+		} // @include link-interact
+	} // a
+
+	html,
+	body {
+		background-color: $color2;
+	}
+
+	body {
+		padding-top: 25px;
+	}
+
+
+
+	.form-action-bar,
+	.app-sidebar,
+	.app-navbar,
+	.app-navbar-right {
+		display: none!important;
+	} // .*
+
+	.app-content-wrap  {
+		margin: 0 auto;
+		float: none;
+	} // .app-content-wrap
+
+	.hide-print {
+		display: none!important;
+	}
+
+	a[href]:after {
+		content: none !important;
+	}
+	.print-pull-right {
+		float: right !important;
+		width: 50% !important;
+		//border: 2px red solid;
+	}
+
+	.print-pull-left {
+		float: left !important;
+		width: 50% !important;
+		//border: 2px blue solid;
+
+	}
+
+	.print-16 {  // 1/6 width
+		width: 16% !important;
+	}
+	.print-25 {
+		width: 25% !important;
+	}
+
+	.print-50 {
+		width: 50% !important;
+	}
+
+	.print-75 {
+		width: 75% !important;
+	}
+
+	.print-83 {  // 5/6 width
+		width: 83% !important;
+	}
+
+	.section-content-label {
+		font-weight: 700 !important;
+		font-size: $xsmall !important;
+		line-height: 20px !important;
+	}
+
+	.section-content-title {
+		margin-bottom: 10px !important;
+		font-weight: 700 !important;
+		font-size: $med !important;
+		line-height: 20px !important;
+	}
+
+	.fc-color4 {
+		color: $color4 !important;
+	}
+
+	.fc-color5 {
+		color: $color5 !important;
+	}
+
+	.fc-color6 {
+		color: $color6 !important;
+	}
+
+	.emerald {   //removes usersnap button from print view/render
+		display: none !important;
+	}
+}

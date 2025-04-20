@@ -1,0 +1,114 @@
+{
+    "key": "group_5a87a03fd0ec2",
+    "title": "Page Builder",
+    "fields": [
+        {
+            "key": "field_5a87a04d4f987",
+            "label": "Page Builder",
+            "name": "page_builder_modules",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5c1d103d839af": {
+                    "key": "layout_5c1d103d839af",
+                    "name": "content_wysiwyg",
+                    "label": "Content WYSIWYG",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5c1d1055839b0",
+                            "label": "",
+                            "name": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5c1d0fbb514c0"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "5a87a05f56ddf": {
+                    "key": "5a87a05f56ddf",
+                    "name": "example_page_builder_module",
+                    "label": "Example Page Builder Module",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5a87a4764bb09",
+                            "label": "",
+                            "name": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_5a87a0867892f"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Module",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-page-builder.blade.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-styleguide.blade.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1557866273
+}

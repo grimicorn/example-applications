@@ -1,0 +1,20 @@
+{
+    "recommendations": [
+        "bmewburn.vscode-intelephense-client",
+        "bradlc.vscode-tailwindcss",
+        "cjhowe7.laravel-blade",
+        "calebporzio.better-phpunit",
+        "christian-kohler.npm-intellisense",
+        "christian-kohler.path-intellisense",
+        "codingyu.laravel-goto-view",
+        "dbaeumer.vscode-eslint",
+        "EditorConfig.EditorConfig",
+        "esbenp.prettier-vscode",
+        "ikappas.phpcs",
+        "junstyle.php-cs-fixer",
+        "mikestead.dotenv",
+        "octref.vetur",
+        "shinnn.stylelint",
+        "wix.vscode-import-cost"
+    ]
+}

@@ -1,0 +1,27 @@
+// ============================
+// Loader
+// ============================
+.fe-loader {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 6px;
+	width: 40px;
+
+	&.should-cover {
+		position: absolute;
+		background-color: rgba($color2, 0.9);
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 999;
+		align-items: start;
+		width: 100%;
+	} // &.should-cover
+
+	&.should-cover,
+	&.is-large {
+		font-size: 32px;
+	} // &.should-cover,&.is-large
+} // .fe-loader

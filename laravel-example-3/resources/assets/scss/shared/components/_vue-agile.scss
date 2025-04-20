@@ -1,0 +1,134 @@
+.agile {
+  position: relative;
+} // .agile
+
+// ===============================
+// Track
+// ===============================
+.agile__track {
+  background-color: $color3;
+} // .agile__track
+
+button.agile__arrow {
+  @extend .fa;
+  position: absolute;
+  top: 50%;
+  height: 32px;
+  width: 32px;
+  margin-top: -16px;
+  background: none;
+  line-height: 1em;
+  padding: 0;
+  border: 0;
+  color: $color5;
+  font-size: 32px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 32px;
+
+	&:after {
+		width: 26px;
+		position: absolute;
+		background: $color2;
+		content: '';
+		top: 3px;
+		right: 3px;
+		bottom: 3px;
+		left: 3px;
+		border-radius: 28px;
+	}
+
+	&:before {
+		position: relative;
+		z-index: 1;
+	}
+
+  svg {
+	display: none;
+  }
+
+  &.agile__arrow--prev {
+	  @extend .fa-chevron-circle-left;
+    left: 15px;
+  } // &.agile__arrow--prev
+
+  &.agile__arrow--next {
+	@extend .fa-chevron-circle-right;
+    right: 15px;
+  } // &.agile__arrow--next
+} // .agile__arrow
+
+// ===============================
+// Fade
+// ===============================
+.agile--fade {
+	.agile__slide {
+		height: 0;
+	}
+
+	.agile__slide--active {
+		 height: auto;
+	} // .agile__slide--active
+} // .agile--fade
+
+.modal-lightbox-slider {
+	.agile,.agile__list,.agile__track,.agile__slide.agile__slide--active {
+		height: 100%;
+		max-height: 100%;
+	}
+} // .modal-lightbox-slider
+
+// ===============================
+// Dots
+// ===============================
+.site-content,
+.blog-content,
+.app-content {
+  ul.agile__dots {
+    margin: 0;
+    list-style: none;
+    display: none;
+    justify-content: center;
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+
+    @include bp-screen-sm {
+      display: flex;
+    }
+
+    li.agile__dot {
+      margin: 0 10px 0 0;
+      padding: 0;
+
+      &:last-child {
+        margin-right: 0;
+      } // &:last-child
+
+      &:before {
+        display: none;
+      } // &:before
+
+      button {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        padding: 0;
+        background: none;
+        border: 1px solid $color2;
+
+        @include bp-screen-sm {
+          width: 12px;
+          height: 12px;
+        } // @include bp-screen-sm
+      } // button
+
+      &.agile__dot--current {
+        button {
+          background: $color5;
+        } // button
+      } // &.agile__dot--current
+    } // li.agile__dot
+  } // .agile__dots
+} // .site-content,.blog-content

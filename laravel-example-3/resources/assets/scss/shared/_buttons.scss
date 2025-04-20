@@ -1,0 +1,128 @@
+// =================================
+// Base Button
+// =================================
+.btn,
+a.btn,
+button,
+input[type="submit"] {
+    color: $color2;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    background-color: $color4;
+    text-decoration: none;
+    padding: 10.5px 25px;
+    line-height: 1em;
+    border: 2px solid $color4;
+    border-radius: 3px;
+    display: inline-block;
+    cursor: pointer;
+    white-space: nowrap;
+	text-align: center;
+
+	&:disabled {
+		opacity: 0.8;
+	}
+
+
+    &:link,
+    &:visited {
+        color: $color2;
+    } // &:link,&:visited
+
+	&.fe-input-height {
+		line-height: 1em;
+	} // .fe-input-height
+
+    &.btn-small {
+		padding: 5.25px 12.5px;
+
+		&.fe-input-height {
+			line-height: 39.5px;
+		} // .fe-input-height
+    } // &.btn-small
+
+    @include link-interact {
+        color: $color2;
+        background-color: hover($color4);
+        text-decoration: none;
+    } // @include link-interact
+
+    &.btn-ghost {
+        @include link-interact {
+            color: $color2;
+            background-color: $color4;
+        } // @include link-interact
+    } // &.btn-ghost
+
+    &.btn-horizontal-input {
+        height: 50px;
+
+        @include bp-screen-xs() {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+    } // &.btn-horizontal-input
+
+    // =================================
+    // Button Colors
+    // =================================
+    @each $key, $color in $theme-colors {
+        &.btn-#{$key} {
+            background-color: $color;
+            border-color: $color;
+
+            @include link-interact {
+                color: $color2;
+                background-color: hover($color);
+                border-color: hover($color);
+            } // @include link-interact
+
+            &.btn-ghost {
+                background: none;
+                color: $color;
+
+                &:link,
+                &:visited {
+                    color: $color;
+                } // &:link,&:visited
+
+                @include link-interact {
+                    @if $key == 'color2' {
+                        color: $color1;
+                    } @else {
+                        color: $color2;
+                    } // @if/@else
+
+                    background-color: $color;
+                    border-color: $color;
+                } // @include link-interact
+            } // &.btn-ghost
+        } // .btn-color*
+    } // @each $key, $color in $theme-colors
+
+    // =================================
+    // Button - Links
+    // =================================
+    &.btn-link {
+        background: none;
+        border: 0;
+        color: inherit;
+        padding: 0;
+        line-height: $base-font-line-height;
+        text-transform: none;
+        font-weight: 400;
+
+        @each $key, $color in $theme-colors {
+            &.btn-#{$key} {
+                color: $color;
+
+                @include link-interact {
+                    color: hover($color);
+                    background: none;
+                    border: 0;
+                } // @include link-interact
+            } // .btn-color*
+        } // @each $key, $color in $theme-colors
+    } // &.btn-link
+} // .btn*

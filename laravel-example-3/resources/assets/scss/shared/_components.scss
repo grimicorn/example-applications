@@ -1,0 +1,23 @@
+@import "variables";
+
+.section-content-label {
+  font-weight: 700;
+  font-size: $xsmall;
+  line-height: 20px;
+}
+
+.section-content-title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: $med;
+  line-height: 20px;
+}
+
+.contact-seller-button {
+	text-align: left;
+
+	@include bp-screen-md {
+		text-align: right;
+	}
+
+}

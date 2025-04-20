@@ -1,0 +1,12 @@
+.alternating-table {
+  @apply relative border-collapse w-full pb-2 mb-2;
+}
+
+.alternating-table th,
+.alternating-table td {
+  @apply px-1 py-3 text-left;
+}
+
+.alternating-table tr:nth-child(even) {
+  @apply bg-gray-200;
+}

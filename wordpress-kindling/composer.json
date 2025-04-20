@@ -1,0 +1,152 @@
+{
+    "name": "matchboxdesigngroup/kindling",
+    "description": "WordPress starter theme",
+    "keywords": [],
+    "license": "GPL-3.0",
+    "type": "project",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        },
+        {
+            "type": "composer",
+            "url": "https://composer.deliciousbrains.com/1763ED150224E6BFD03775C8EDD208C6"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "advanced-custom-fields/advanced-custom-fields-pro",
+                "version": "5.6.9",
+                "type": "wordpress-plugin",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9NjA0NDl8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE1LTA3LTIyIDE2OjE3OjU3"
+                }
+            }
+        },
+        {
+            "type": "vcs",
+            "url": "ssh://git@gitlab.com/kindling/support.git"
+        },
+        {
+            "type": "vcs",
+            "url": "ssh://git@gitlab.com/kindling/development.git"
+        },
+        {
+            "type": "vcs",
+            "url": "ssh://git@gitlab.com/kindling/blade.git"
+        },
+        {
+            "type": "vcs",
+            "url": "ssh://git@gitlab.com/kindling/image-forwarding.git"
+        },
+        {
+            "type": "vcs",
+            "url": "ssh://git@gitlab.com/kindling/mailtrap.git"
+        },
+        {
+            "type": "vcs",
+            "url": "ssh://git@gitlab.com/kindling/config.git"
+        },
+        {
+            "type": "vcs",
+            "url": "ssh://git@gitlab.com/kindling/acf-local-json.git"
+        },
+        {
+            "type": "vcs",
+            "url": "ssh://git@gitlab.com/kindling/post-types.git"
+        },
+        {
+            "type": "vcs",
+            "url": "ssh://git@gitlab.com/kindling/page-builder.git"
+        },
+        {
+            "type": "vcs",
+            "url": "ssh://git@gitlab.com/kindling/images.git"
+        },
+        {
+            "type": "vcs",
+            "url": "ssh://git@gitlab.com/kindling/assets.git"
+        },
+        {
+            "type": "vcs",
+            "url": "ssh://git@gitlab.com/kindling/shortcodes.git"
+        },
+        {
+            "type": "vcs",
+            "url": "ssh://git@gitlab.com/kindling/customizer.git"
+        },
+        {
+            "type": "vcs",
+            "url": "ssh://git@gitlab.com/kindling/easter-eggs.git"
+        },
+        {
+            "type": "vcs",
+            "url": "ssh://git@gitlab.com/kindling/stubs.git"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "kindling/development": "1.0.*",
+        "kindling/support": "1.1.*",
+        "kindling/stubs": "1.0.*",
+        "kindling/blade": "1.0.*",
+        "kindling/config": "1.0.*",
+        "kindling/acf-local-json": "1.0.*",
+        "kindling/post-types": "1.0.*",
+        "kindling/page-builder": "1.0.*",
+        "kindling/images": "1.0.*",
+        "kindling/assets": "1.0.*",
+        "kindling/shortcodes": "1.0.*",
+        "kindling/customizer": "1.0.*",
+        "kindling/easter-eggs": "1.0.*",
+        "sllh/composer-versions-check": "^2.0",
+        "symfony/var-dumper": "~3.3"
+    },
+    "require-dev": {
+        "kindling/image-forwarding": "1.1.*",
+        "kindling/mailtrap": "1.0.*",
+        "skyzyx/phpunit-result-printer": "^2.0",
+        "friendsofphp/php-cs-fixer": "^2.10",
+        "squizlabs/php_codesniffer": "^3.2",
+        "fzaninotto/faker": "~1.4",
+        "mockery/mockery": "~1.0",
+        "phpunit/phpunit": "~6.0",
+        "wpackagist-plugin/query-monitor": "*",
+        "wpackagist-plugin/force-regenerate-thumbnails": "*",
+        "wpackagist-plugin/duplicate-post": "*",
+        "wpackagist-plugin/disable-comments": "*",
+        "wpackagist-plugin/crop-thumbnails": "*",
+        "deliciousbrains-plugin/wp-migrate-db-pro": "*",
+        "deliciousbrains-plugin/wp-migrate-db-pro-media-files": "*",
+        "advanced-custom-fields/advanced-custom-fields-pro": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kindling\\Theme\\": "wp-content/themes/base/src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kindling\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "platform": {
+            "php": "7.0"
+        },
+        "gitlab-token": {
+            "gitlab.com": "NzKFSyhMW6pxY2ijbbax"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php vendor/kindling/stubs/setup.php"
+        ],
+        "post-update-cmd": [
+            "php vendor/kindling/stubs/setup.php"
+        ]
+    }
+}

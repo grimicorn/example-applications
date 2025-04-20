@@ -1,0 +1,225 @@
+// ==================================
+// Navigation
+// ==================================
+.navigation-items-wrap{
+  @apply overflow-hidden;
+  max-height:0;
+  transition:500ms ease-in-out;
+  transition-property:max-height;
+  &.open {
+    max-height:150vh;
+  }
+  @screen md {
+    @apply overflow-visible;
+    max-height:none;
+  }
+}
+.site-navigation-menu {
+  @apply list-reset bg-grey-light mb-0;
+  @screen md {
+    @apply bg-transparent;
+  }
+  .dropdown{
+    > a{
+      width:calc(100% - 38px);
+    }
+    @screen md{
+      > a{
+        width:auto;
+      }
+    }
+    &.open{
+     > .item-toggle{
+        &:before{
+          transform:rotate(-45deg);
+        }
+        &:after{
+          transform:rotate(45deg);
+        }
+      }
+    }
+  }
+  a {
+    @apply block w-full whitespace-no-wrap;
+    text-decoration:none;
+    @screen md{
+      @apply w-auto border-0;
+    }
+  }
+  .item-toggle{
+    @apply block relative cursor-pointer;
+    width:38px;
+    background-color:rgba(0,0,0,.1);
+    @screen md{
+      @apply hidden;
+    }
+    &:after,&:before{
+      content:"";
+      @apply block rounded;
+      width:10px;
+      height:2px;
+      background-color:black;
+      position: absolute;
+      transition: 300ms ease-in-out;
+      transition-property:transform,top;
+      top:50%;
+    }
+    &:before{
+      transform:rotate(45deg);
+      left:calc(50% - 8px);
+    }
+    &:after{
+      transform:rotate(-45deg);
+      left:calc(50% - 2px);
+    }
+  }
+
+  // ================================
+  // Menu items
+  // ================================
+  .menu-item {
+    @apply flex flex-wrap m-0 border-t-1 border-grey relative;
+    &.open > .sub-menu {
+      @apply block;
+      max-height:50vh;
+    }
+    &:first-child{
+      @apply border-0;
+    }
+    @screen md {
+      @apply border-0;
+      display:list-item;
+      &:hover > .sub-menu {
+        @apply opacity-100 visible z-50;
+        max-height:100vh;
+      } // &:hover > .sub-menu
+    } // @screen md
+  } // .menu-item
+
+  // ================================
+  // Top level menu items
+  // ================================
+  > .menu-item {
+    > a{
+      @apply px-4 py-2;
+    }
+    @screen md{
+      @apply float-left px-4;
+      &:first-child{
+        padding-left:0;
+      }
+      &:last-child{
+        padding-right:0;
+      }
+      a{
+        @apply p-0;
+      }
+    } // @screen md
+  } // > .menu-item
+
+
+  // ================================
+  // Sub-menu
+  // ================================
+  .sub-menu {
+    @apply list-reset bg-theme-1 w-full m-0 overflow-hidden;
+    max-height:0;
+    transition:500ms ease-in-out;
+    transition-property:opacity,visibility,max-height;
+    @screen md{
+      @apply absolute w-auto opacity-0 invisible overflow-visible;
+      transition:200ms ease-in-out;
+    }
+
+    a {
+      @apply text-white no-underline block py-2 px-4;
+    } // a
+
+    // ================================
+    // Sub-Menu Sub-menu
+    // ================================
+    .sub-menu {
+      @apply pin-t border-theme-1;
+      left: 100%;
+    } // .sub-menu .sub-menu
+  } // .sub-menu
+
+
+  // ================================
+  // Sub-Menu items
+  // ================================
+  .sub-menu .menu-item {
+    &.active > a,
+    a:hover,
+    a:focus,
+    a:active {
+      @apply bg-theme-2;
+    }
+  } // > .menu-item
+} // .site-navigation-menu
+
+  // ================================
+  // Menu toggle animation
+  // ================================
+  .menu-toggle {
+    @apply flex cursor-pointer;
+
+    .toggle-span-wrap{
+      @apply relative;
+      height:28px;
+      width:38px;
+    }
+
+    span{
+      @apply block absolute rounded;
+      background-color:black;
+      height:4px;
+      width:38px;
+      top:0;
+      transition: .25s ease-in-out;
+      transition-property:opacity,top,height,transform;
+
+      &:nth-child(2),&:nth-child(4){
+        top:11px;
+      }
+
+      &:nth-child(3){
+        top:22px;
+      }
+
+      &:nth-child(4){
+        opacity:0;
+      }
+    } // .menu-toggle-icon-bars
+
+    &.open {
+
+      span{
+        &:first-child,&:nth-child(3){
+          opacity:0;
+          top:11px;
+          height:0;
+        }
+
+        &:nth-child(2){
+          transform:rotate(45deg);
+        }
+
+        &:nth-child(4){
+          transform:rotate(-45deg);
+          opacity:1;
+        }
+      }
+
+    } // &.open
+  } // .menu-toggle
+
+  .mobile-nav-items{
+    @apply mx-4;
+    @screen sm{
+      @apply mx-0;
+    }
+    @screen md{
+      @apply hidden;
+    }
+  }
